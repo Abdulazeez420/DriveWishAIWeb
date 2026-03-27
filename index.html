@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DriveWise AI — Smart Vehicle Management App</title>
+  <meta name="description" content="Track fuel costs, schedule maintenance, log business trips and generate tax reports. Free offline-first vehicle management app for Android." />
+  <meta property="og:title" content="DriveWise AI — Drive Smarter" />
+  <meta property="og:description" content="Encrypted vehicle tracker. Fuel logs, maintenance reminders, tax trip reports, and cloud backup — all offline, all private." />
+  <meta property="og:image" content="/assets/og-preview.png" />
+  <meta name="theme-color" content="#4F8EF7" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- =========================================================
+     NAVIGATION BAR
+     ========================================================= -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+
+    <a href="#hero" class="nav-logo" aria-label="DriveWise AI home">
+      <img src="assets/circle_splash.png" alt="DriveWise AI logo" class="nav-logo-img" width="36" height="36" />
+      DriveWise AI
+    </a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <a href="privacy.html" class="nav-privacy-link">Privacy Policy</a>
+      <a href="https://play.google.com/store/apps/details?id=com.drivewiseai"
+         class="btn-get-app"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="Get DriveWise AI on Google Play">Get the App</a>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer" id="hamburger-btn">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </div>
+</nav>
+
+<!-- Mobile drawer -->
+<div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <a href="#features"      onclick="closeMobileMenu()">Features</a>
+  <a href="#about"         onclick="closeMobileMenu()">About</a>
+  <a href="#contact"       onclick="closeMobileMenu()">Contact</a>
+  <a href="privacy.html" onclick="closeMobileMenu()">Privacy Policy</a>
+  <a href="https://play.google.com/store/apps/details?id=com.drivewiseai"
+     class="btn btn-primary"
+     target="_blank"
+     rel="noopener noreferrer">Get the App</a>
+</div>
+
+
+<!-- =========================================================
+     HERO SECTION
+     ========================================================= -->
+<section id="hero" aria-label="Hero">
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+  <div class="hero-inner">
+    <!-- Left column -->
+    <div class="hero-content">
+      <div class="hero-badge" aria-label="Smart Vehicle Management · AI-Powered">
+        <img src="assets/logo.png" alt="" aria-hidden="true" width="20" height="20" style="border-radius:4px;" />&nbsp;&nbsp;Smart Vehicle Management · AI-Powered
+      </div>
+
+      <h1 class="hero-title">
+        Drive Smarter.<br>
+        Track Everything.<br>
+        Save More.
+      </h1>
+
+      <p class="hero-sub">
+        DriveWise AI is your all-in-one offline-first vehicle companion.
+        Track fuel, manage maintenance, log business trips, and
+        export tax-ready reports — all encrypted on your device.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="https://play.google.com/store/apps/details?id=com.drivewiseai"
+           class="btn btn-primary"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Download DriveWise AI on Google Play">
+          ▶&nbsp; Download on Google Play
+        </a>
+        <a href="#features" class="btn btn-ghost">See All Features ↓</a>
+      </div>
+
+      <div class="hero-trust" aria-label="Trust highlights">
+        <span class="hero-trust-item"><img src="assets/data-security.png" alt="" aria-hidden="true" width="18" height="18" style="object-fit:contain;" /> Encrypted on-device</span>
+        <span class="hero-trust-item"><img src="assets/offline.png" alt="" aria-hidden="true" width="18" height="18" style="object-fit:contain;" /> 100% Offline</span>
+        <span class="hero-trust-item">🌙 Light &amp; Dark Mode</span>
+      </div>
+    </div>
+
+    <!-- Right column — phone mockup -->
+    <div class="hero-phone" aria-hidden="true">
+      <div class="phone-wrapper">
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <div class="phone-status">
+              <span>9:41</span><span>●●●</span>
+            </div>
+            <div class="streak-badge">🔥 12 Day Streak</div>
+            <div class="phone-header">DriveWise AI</div>
+            <div class="phone-card-mock">
+              <div class="phone-card-title">TOTAL SPENT THIS MONTH</div>
+              <div class="phone-card-value">₦182,400</div>
+              <div class="phone-card-sub">↑ 8% vs last month</div>
+            </div>
+            <div class="phone-chart-area">
+              <div style="font-size:10px;color:var(--text-secondary);margin-bottom:8px;">Monthly Spending</div>
+              <div class="phone-chart-bars">
+                <div class="phone-bar" style="height:40%"></div>
+                <div class="phone-bar" style="height:60%"></div>
+                <div class="phone-bar" style="height:45%"></div>
+                <div class="phone-bar" style="height:80%"></div>
+                <div class="phone-bar" style="height:55%"></div>
+                <div class="phone-bar" style="height:70%"></div>
+                <div class="phone-bar" style="height:100%;opacity:1"></div>
+              </div>
+            </div>
+            <div class="phone-card-mock" style="margin-top:12px;background:rgba(48,209,88,0.08);border-color:rgba(48,209,88,0.2)">
+              <div class="phone-card-title" style="color:var(--success)">NEXT SERVICE DUE</div>
+              <div style="font-size:12px;font-weight:600;">Oil Change · in 320 km</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     3. KEY FEATURES OVERVIEW
+     ========================================================= -->
+<section id="features" class="section section--dark" aria-labelledby="features-heading">
+  <div class="container">
+    <div class="features-header fade-up">
+      <span class="label-pill">EVERYTHING YOU NEED</span>
+      <h2 id="features-heading">One App. Complete Vehicle Intelligence.</h2>
+      <p>From daily fill-ups to year-end tax reports — DriveWise AI handles it all.</p>
+    </div>
+
+    <div class="features-grid">
+      <article class="card feature-card fade-up">
+        <img src="assets/gas-station.png" class="feature-icon" alt="" aria-hidden="true" />
+        <h4>Fuel &amp; Charging Tracker</h4>
+        <p>Log every fill-up with auto-calculated totals, GPS station detection, and OCR receipt scanning. Tracks km/L, L/100km, and MPG.</p>
+      </article>
+      <article class="card feature-card fade-up" style="transition-delay:0.1s">
+        <img src="assets/service-management.png" class="feature-icon" alt="" aria-hidden="true" />
+        <h4>Maintenance Scheduler</h4>
+        <p>Schedule oil changes, tyre rotations and more by date or mileage. Get notified before they're overdue. Log parts vs. labour costs separately.</p>
+      </article>
+      <article class="card feature-card fade-up" style="transition-delay:0.2s">
+        <img src="assets/telemetry.png" class="feature-icon" alt="" aria-hidden="true" />
+        <h4>AI-Powered Insights</h4>
+        <p>Personalised spending insights, an interactive breakdown pie chart, monthly trends, and an AI Assistant — all powered by your real driving data.</p>
+      </article>
+      <article class="card feature-card fade-up" style="transition-delay:0.3s">
+        <img src="assets/tax.png" class="feature-icon" alt="" aria-hidden="true" />
+        <h4>Tax &amp; Trip Logging</h4>
+        <p>Record business vs personal trips. Generate a professional PDF Tax Deduction Report per vehicle, complete with driver name and deductible distance.</p>
+      </article>
+      <article class="card feature-card fade-up" style="transition-delay:0.4s">
+        <img src="assets/data-security.png" class="feature-icon" alt="" aria-hidden="true" />
+        <h4>Privacy-First Security</h4>
+        <p>AES-256 encrypted Isar database backed by hardware-backed OS keys. Your data never leaves your device unless you explicitly export it.</p>
+      </article>
+      <article class="card feature-card fade-up" style="transition-delay:0.5s">
+        <img src="assets/backup.png" class="feature-icon" alt="" aria-hidden="true" />
+        <h4>Cloud Backup &amp; Restore</h4>
+        <p>Encrypted sync to Google Drive or Dropbox. Auto-backup on a schedule you choose — daily, weekly, or monthly. Restore with one tap.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     4. DEEP-DIVE 1 — FUEL & CHARGING
+     ========================================================= -->
+<section class="deep-dive" aria-labelledby="fuel-heading">
+  <div class="dive-inner">
+    <div class="dive-phone fade-up" aria-hidden="true">
+      <div class="dive-phone-frame">
+        <div class="dive-phone-screen">
+          <div style="font-size:13px;font-weight:700;margin-bottom:14px;">Fuel Logs</div>
+          <div class="mock-list">
+            <div class="mock-item">
+              <div class="mock-item-title">Total Petroleum · Allen Ave</div>
+              <div class="mock-item-sub">47.5 L · ₦28,500 · 12 km/L <span class="mock-item-badge badge-green">Efficient</span></div>
+            </div>
+            <div class="mock-item">
+              <div class="mock-item-title">MRS Petrol · Ikeja</div>
+              <div class="mock-item-sub">40.0 L · ₦24,000 · 11.2 km/L <span class="mock-item-badge badge-blue">Normal</span></div>
+            </div>
+            <div class="mock-item">
+              <div class="mock-item-title">Conoil · Victoria Island</div>
+              <div class="mock-item-sub">52.0 L · ₦31,200 · 13.1 km/L <span class="mock-item-badge badge-green">Efficient</span></div>
+            </div>
+            <div class="mock-item">
+              <div class="mock-item-title">Mobil · Lekki</div>
+              <div class="mock-item-sub">35.0 L · ₦21,000 · 10.8 km/L <span class="mock-item-badge badge-orange">Low</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dive-content fade-up">
+      <h3 id="fuel-heading">Never Miss a Fill-Up Detail</h3>
+      <p>
+        Log petrol, diesel, electric charging, and hybrid refuels in seconds.
+        DriveWise AI auto-calculates your total cost while you type and
+        tracks your fuel efficiency (km/L, L/100km, MPG) across every tank.
+      </p>
+      <ul class="dive-bullets" role="list">
+        <li class="dive-bullet"><span class="dive-bullet-check" aria-hidden="true">✓</span>Auto-calculated total — edit quantity or price, the other updates instantly</li>
+        <li class="dive-bullet"><span class="dive-bullet-check" aria-hidden="true">✓</span>GPS "Detect Location" auto-tags your current fuel station</li>
+        <li class="dive-bullet"><span class="dive-bullet-check" aria-hidden="true">✓</span>OCR receipt scanner — point camera at receipt, values fill in automatically</li>
+        <li class="dive-bullet"><span class="dive-bullet-check" aria-hidden="true">✓</span>Full Fuel Economy history with efficiency trend graph</li>
+        <li class="dive-bullet"><span class="dive-bullet-check" aria-hidden="true">✓</span>Supports Litres, Gallons, and kWh for EVs</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     5. DEEP-DIVE 2 — MAINTENANCE & EXPENSES
+     ========================================================= -->
+<section class="deep-dive deep-dive--alt" aria-labelledby="maintenance-heading">
+  <div class="dive-inner dive-inner--rev">
+    <div class="dive-content fade-up">
+      <h3 id="maintenance-heading">Stay Ahead of Every Service Interval</h3>
+      <p>
+        Schedule tasks by date or odometer distance. Get push notifications
+        before your next oil change, tyre rotation, or service is due.
+        Split repair costs into parts and labour for accurate record-keeping.
+      </p>
+      <ul class="dive-bullets" role="list">
+        <li class="dive-bullet"><span class="dive-bullet-check" aria-hidden="true">✓</span>Date-based and mileage-based reminders</li>
+        <li class="dive-bullet"><span class="dive-bullet-check" aria-hidden="true">✓</span>Parts vs. labour cost breakdown per job</li>
+        <li class="dive-bullet"><span class="dive-bullet-check" aria-hidden="true">✓</span>General expense tracking: Insurance, Parking, Tolls, Fines</li>
+        <li class="dive-bullet"><span class="dive-bullet-check" aria-hidden="true">✓</span>Category filtering for monthly expense summaries</li>
+        <li class="dive-bullet"><span class="dive-bullet-check" aria-hidden="true">✓</span>Auto-synced odometer — every log keeps your mileage current</li>
+      </ul>
+    </div>
+    <div class="dive-phone fade-up" aria-hidden="true">
+      <div class="dive-phone-frame">
+        <div class="dive-phone-screen">
+          <div style="font-size:13px;font-weight:700;margin-bottom:14px;">Maintenance</div>
+          <div class="mock-list">
+            <div class="mock-item">
+              <div class="mock-item-title">Oil Change</div>
+              <div class="mock-item-sub">Due in 320 km · ₦15,000 total <span class="mock-item-badge badge-orange">Due Soon</span></div>
+            </div>
+            <div class="mock-item">
+              <div class="mock-item-title">Tyre Rotation</div>
+              <div class="mock-item-sub">Due Apr 15 · ₦8,500 <span class="mock-item-badge badge-blue">Scheduled</span></div>
+            </div>
+            <div class="mock-item">
+              <div class="mock-item-title">Brake Pad Check</div>
+              <div class="mock-item-sub">Due in 2,000 km <span class="mock-item-badge badge-green">On Track</span></div>
+            </div>
+            <div class="mock-item">
+              <div class="mock-item-title">Air Filter</div>
+              <div class="mock-item-sub">Completed Mar 10 <span class="mock-item-badge badge-green">Done</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     6. DEEP-DIVE 3 — TAX & TRIPS
+     ========================================================= -->
+<section class="deep-dive" aria-labelledby="trips-heading">
+  <div class="dive-inner">
+    <div class="dive-phone fade-up" aria-hidden="true">
+      <div class="dive-phone-frame">
+        <div class="dive-phone-screen">
+          <div style="font-size:13px;font-weight:700;margin-bottom:14px;">Trip Logs</div>
+          <div class="mock-list">
+            <div class="mock-item">
+              <div class="mock-item-title">Client Visit · Ikeja</div>
+              <div class="mock-item-sub">48 km · Mar 22 <span class="mock-item-badge badge-blue">Business</span></div>
+            </div>
+            <div class="mock-item">
+              <div class="mock-item-title">Weekend Drive</div>
+              <div class="mock-item-sub">120 km · Mar 20 <span class="mock-item-badge badge-orange">Personal</span></div>
+            </div>
+            <div class="mock-item">
+              <div class="mock-item-title">Warehouse Delivery</div>
+              <div class="mock-item-sub">65 km · Mar 18 <span class="mock-item-badge badge-blue">Business</span></div>
+            </div>
+          </div>
+          <div style="margin-top:14px;background:rgba(79,142,247,0.1);border:1px solid rgba(79,142,247,0.2);border-radius:10px;padding:12px;">
+            <div style="font-size:10px;color:var(--text-secondary);">2026 TAX DEDUCTIBLE</div>
+            <div style="font-size:18px;font-weight:800;color:var(--primary);">1,240 km</div>
+            <div style="font-size:10px;color:var(--success);margin-top:2px;">Generate PDF Report ›</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dive-content fade-up">
+      <h3 id="trips-heading">Log Trips. Claim Every Kilometre.</h3>
+      <p>
+        Mark each trip as business or personal. At tax time, generate a
+        professionally formatted PDF Tax Deduction Report — complete with
+        your vehicle details, total deductible distance, and cost breakdown.
+      </p>
+      <ul class="dive-bullets" role="list">
+        <li class="dive-bullet"><span class="dive-bullet-check" aria-hidden="true">✓</span>Business vs. personal trip classification</li>
+        <li class="dive-bullet"><span class="dive-bullet-check" aria-hidden="true">✓</span>Auto-calculated distance from odometer readings</li>
+        <li class="dive-bullet"><span class="dive-bullet-check" aria-hidden="true">✓</span>One-tap PDF export for accountants or self-assessment</li>
+        <li class="dive-bullet"><span class="dive-bullet-check" aria-hidden="true">✓</span>Built-in Tax Calculator — estimate deductible expenses by business-use %</li>
+        <li class="dive-bullet"><span class="dive-bullet-check" aria-hidden="true">✓</span>Mileage Calculator — km/L, L/100km, MPG UK, cost per 100 km</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     7. PRIVACY & SECURITY
+     ========================================================= -->
+<section id="privacy-section" aria-labelledby="privacy-sec-heading">
+  <img src="assets/data-security.png" class="privacy-lock" alt="" aria-hidden="true" />
+  <h2 id="privacy-sec-heading">Your Data. Your Device. Always.</h2>
+  <p class="section-sub text-muted">
+    DriveWise AI stores everything encrypted on your phone using AES-256
+    hardware-backed keys. No account required. No server. No tracking
+    of your vehicle data — ever.
+  </p>
+
+  <div class="privacy-stats" role="list">
+    <div class="privacy-stat-card card fade-up" role="listitem">
+      <div class="privacy-stat-icon" aria-hidden="true"><img src="assets/reset-password.png" alt="" width="48" height="48" style="object-fit:contain;" /></div>
+      <div class="privacy-stat-value">AES-256</div>
+      <div class="privacy-stat-label">Hardware-backed encryption</div>
+    </div>
+    <div class="privacy-stat-card card fade-up" style="transition-delay:0.1s" role="listitem">
+      <div class="privacy-stat-icon" aria-hidden="true"><img src="assets/offline.png" alt="" width="48" height="48" style="object-fit:contain;" /></div>
+      <div class="privacy-stat-value">100% Offline</div>
+      <div class="privacy-stat-label">No internet needed to use the app</div>
+    </div>
+    <div class="privacy-stat-card card fade-up" style="transition-delay:0.2s" role="listitem">
+      <div class="privacy-stat-icon" aria-hidden="true"><img src="assets/bug-report.png" alt="" width="48" height="48" style="object-fit:contain;" /></div>
+      <div class="privacy-stat-value">Zero telemetry</div>
+      <div class="privacy-stat-label">Vehicle data never sent to any server</div>
+    </div>
+  </div>
+
+  <div class="export-row fade-up" aria-label="Export formats">
+    <div class="export-card">
+      <img src="assets/braces.png" class="export-card-icon" alt="" aria-hidden="true" />
+      <div>
+        <div>JSON Export</div>
+        <div class="export-card-desc">Pretty-printed, shareable file</div>
+      </div>
+    </div>
+    <div class="export-card">
+      <img src="assets/divestiture.png" class="export-card-icon" alt="" aria-hidden="true" />
+      <div>
+        <div>PDF Export</div>
+        <div class="export-card-desc">Formatted A4 report with tables</div>
+      </div>
+    </div>
+    <div class="export-card">
+      <img src="assets/excel.png" class="export-card-icon" alt="" aria-hidden="true" />
+      <div>
+        <div>Excel Export</div>
+        <div class="export-card-desc">Spreadsheet for data analysis</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     8. CALCULATORS SPOTLIGHT
+     ========================================================= -->
+<section id="calculators" aria-labelledby="calc-heading">
+  <div class="calc-inner">
+    <div class="calc-content fade-up">
+      <span class="label-pill">BUILT-IN TOOLS</span>
+      <h3 id="calc-heading">Tax &amp; Mileage Calculators</h3>
+      <p>
+        No spreadsheet juggling. Enter your annual mileage, business-use
+        percentage, and vehicle costs — DriveWise AI instantly calculates
+        your deductible expenses and estimated tax saving.
+      </p>
+      <div class="calc-tabs" role="tablist" aria-label="Calculator tabs">
+        <div class="calc-tab active" role="tab" aria-selected="true">TAX CALCULATOR</div>
+        <div class="calc-tab"        role="tab" aria-selected="false">MILEAGE CALCULATOR</div>
+      </div>
+    </div>
+    <div class="calc-mock fade-up" aria-hidden="true">
+      <h4>Mileage Calculator</h4>
+      <div class="calc-field">
+        <label>Start Odometer (km)</label>
+        <div class="calc-field-bar"></div>
+      </div>
+      <div class="calc-field">
+        <label>End Odometer (km)</label>
+        <div class="calc-field-bar"></div>
+      </div>
+      <div class="calc-field">
+        <label>Fuel Used (L)</label>
+        <div class="calc-field-bar"></div>
+      </div>
+      <div class="calc-field">
+        <label>Price per Litre (optional)</label>
+        <div class="calc-field-bar"></div>
+      </div>
+      <div class="calc-output">
+        <div>
+          <div class="calc-output-label">Efficiency</div>
+          <div style="font-size:13px;color:var(--text-secondary);">12.4 km/L · 8.06 L/100km · 29.2 MPG</div>
+        </div>
+        <div class="calc-output-value">12.4 km/L</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     9. CLOUD SYNC SPOTLIGHT
+     ========================================================= -->
+<section id="cloud-sync" aria-labelledby="cloud-heading">
+  <div class="container">
+    <div class="cloud-header fade-up">
+      <span class="label-pill">BACKUP &amp; RESTORE</span>
+      <h2 id="cloud-heading">Your Backup. On Your Terms.</h2>
+      <p>No proprietary cloud. Sync your encrypted database directly to Google Drive or Dropbox — services you already trust.</p>
+    </div>
+
+    <div class="cloud-cards">
+      <div class="card cloud-card fade-up">
+        <img src="assets/google-drive.png" class="cloud-card-icon" alt="" aria-hidden="true" />
+        <h4>Google Drive</h4>
+        <p class="cloud-card-tagline">"Backs up to your private appDataFolder — invisible to other apps"</p>
+        <ul class="cloud-features" role="list">
+          <li class="cloud-feature">ZIP compression</li>
+          <li class="cloud-feature">Auto-deduplication</li>
+          <li class="cloud-feature">Timestamp tracking</li>
+          <li class="cloud-feature">Configurable frequency: daily / weekly / monthly</li>
+        </ul>
+      </div>
+      <div class="card cloud-card fade-up" style="transition-delay:0.1s">
+        <img src="assets/backup.png" class="cloud-card-icon" alt="" aria-hidden="true" />
+        <h4>Dropbox</h4>
+        <p class="cloud-card-tagline">"Backs up as encrypted ZIP into your /Apps/DriveWise AI folder"</p>
+        <ul class="cloud-features" role="list">
+          <li class="cloud-feature">Merge restore — only adds missing records</li>
+          <li class="cloud-feature">ZIP compression</li>
+          <li class="cloud-feature">Works alongside Google Drive</li>
+          <li class="cloud-feature">Configurable frequency: daily / weekly / monthly</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cloud-note fade-up">
+      <div class="cloud-note-auto">
+        💡 Enable auto-backup in <strong>Settings → Backup &amp; Sync</strong>. DriveWise AI checks your chosen frequency on every app launch and backs up automatically when due.
+      </div>
+      <p class="cloud-note-restore">
+        Restore replaces local data after a confirmation dialog. All data remains encrypted end-to-end throughout the process.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     10. SCREENSHOTS CAROUSEL
+     ========================================================= -->
+<section id="screenshots" aria-labelledby="screenshots-heading">
+  <div class="container">
+    <div class="screenshots-header fade-up">
+      <h2 id="screenshots-heading">See It In Action</h2>
+    </div>
+
+    <div class="carousel-outer" aria-label="App screenshots carousel" role="region">
+      <button class="carousel-btn carousel-btn--prev" aria-label="Previous slide" id="carousel-prev">‹</button>
+      <div class="carousel-track" id="carousel-track" role="list">
+
+        <div class="carousel-slide" role="listitem">
+          <div class="carousel-phone">
+            <div class="carousel-screen">
+              <div style="font-size:10px;color:var(--text-secondary);margin-bottom:8px;">9:41</div>
+              <div class="streak-badge" style="font-size:10px;">🔥 12 Day Streak</div>
+              <div style="font-size:11px;font-weight:700;margin:8px 0 10px;">Dashboard</div>
+              <div class="phone-chart-bars" style="height:50px;margin-bottom:10px;">
+                <div class="phone-bar" style="height:50%"></div>
+                <div class="phone-bar" style="height:70%"></div>
+                <div class="phone-bar" style="height:60%"></div>
+                <div class="phone-bar" style="height:90%"></div>
+                <div class="phone-bar" style="height:75%"></div>
+                <div class="phone-bar" style="height:100%"></div>
+              </div>
+              <div class="mock-item"><div class="mock-item-title">Total Spent</div><div style="font-size:16px;font-weight:800;color:var(--primary);">₦182,400</div></div>
+            </div>
+          </div>
+          <p class="carousel-label">Dashboard — spending chart + streak badge</p>
+        </div>
+
+        <div class="carousel-slide" role="listitem">
+          <div class="carousel-phone">
+            <div class="carousel-screen">
+              <div style="font-size:11px;font-weight:700;margin-bottom:10px;">Fuel Logs</div>
+              <div class="mock-list">
+                <div class="mock-item"><div class="mock-item-title">Total Petroleum</div><div class="mock-item-sub">47.5 L · 12 km/L <span class="mock-item-badge badge-green">12.0</span></div></div>
+                <div class="mock-item"><div class="mock-item-title">MRS Petrol</div><div class="mock-item-sub">40.0 L · 11.2 km/L <span class="mock-item-badge badge-blue">11.2</span></div></div>
+                <div class="mock-item"><div class="mock-item-title">Conoil</div><div class="mock-item-sub">52.0 L · 13.1 km/L <span class="mock-item-badge badge-green">13.1</span></div></div>
+              </div>
+            </div>
+          </div>
+          <p class="carousel-label">Fuel Log list — cards with efficiency badges</p>
+        </div>
+
+        <div class="carousel-slide" role="listitem">
+          <div class="carousel-phone">
+            <div class="carousel-screen">
+              <div style="font-size:11px;font-weight:700;margin-bottom:10px;">Add Fill-Up</div>
+              <div style="background:rgba(48,209,88,0.1);border:1px solid rgba(48,209,88,0.2);border-radius:8px;padding:8px;font-size:10px;margin-bottom:10px;color:var(--success);">📷 OCR pre-filled from receipt</div>
+              <div class="calc-field"><label style="font-size:10px;">Quantity (L)</label><div class="calc-field-bar" style="height:28px;"></div></div>
+              <div class="calc-field"><label style="font-size:10px;">Price per L</label><div class="calc-field-bar" style="height:28px;"></div></div>
+              <div class="calc-field"><label style="font-size:10px;">Station</label><div style="height:28px;background:rgba(255,255,255,0.06);border-radius:8px;border:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:flex-end;padding-right:8px;"><span style="font-size:10px;color:var(--primary);">📍 GPS</span></div></div>
+            </div>
+          </div>
+          <p class="carousel-label">Add Fuel Sheet — GPS button + OCR banner</p>
+        </div>
+
+        <div class="carousel-slide" role="listitem">
+          <div class="carousel-phone">
+            <div class="carousel-screen">
+              <div style="font-size:11px;font-weight:700;margin-bottom:10px;">Maintenance</div>
+              <div class="mock-list">
+                <div class="mock-item"><div class="mock-item-title">Oil Change</div><div class="mock-item-sub">Due in 320 km <span class="mock-item-badge badge-orange">Due Soon</span></div></div>
+                <div class="mock-item"><div class="mock-item-title">Tyre Rotation</div><div class="mock-item-sub">Due Apr 15 <span class="mock-item-badge badge-blue">Scheduled</span></div></div>
+                <div class="mock-item"><div class="mock-item-title">Air Filter</div><div class="mock-item-sub">Done Mar 10 <span class="mock-item-badge badge-green">Done</span></div></div>
+              </div>
+            </div>
+          </div>
+          <p class="carousel-label">Maintenance tasks list</p>
+        </div>
+
+        <div class="carousel-slide" role="listitem">
+          <div class="carousel-phone">
+            <div class="carousel-screen">
+              <div style="font-size:11px;font-weight:700;margin-bottom:10px;">Tax Report</div>
+              <div style="font-size:10px;color:var(--text-secondary);margin-bottom:8px;">Vehicle: Toyota Camry 2022</div>
+              <div style="background:rgba(79,142,247,0.1);border:1px solid rgba(79,142,247,0.2);border-radius:10px;padding:12px;margin-bottom:10px;">
+                <div style="font-size:10px;color:var(--text-secondary);">2026 DEDUCTIBLE KM</div>
+                <div style="font-size:20px;font-weight:800;color:var(--primary);">1,240 km</div>
+              </div>
+              <div style="background:var(--primary);border-radius:8px;padding:10px;text-align:center;font-size:11px;font-weight:700;">Generate PDF Report</div>
+            </div>
+          </div>
+          <p class="carousel-label">Tax Report card — vehicle picker + Generate PDF button</p>
+        </div>
+
+        <div class="carousel-slide" role="listitem">
+          <div class="carousel-phone">
+            <div class="carousel-screen">
+              <div style="font-size:11px;font-weight:700;margin-bottom:10px;">Settings</div>
+              <div class="mock-list">
+                <div class="mock-item"><div class="mock-item-title">Theme Mode</div><div class="mock-item-sub"><span class="mock-item-badge badge-blue">Dark</span></div></div>
+                <div class="mock-item"><div class="mock-item-title">Currency</div><div class="mock-item-sub"><span class="mock-item-badge badge-green">NGN ₦</span></div></div>
+                <div class="mock-item"><div class="mock-item-title">Auto-Backup</div><div class="mock-item-sub"><span class="mock-item-badge badge-blue">Weekly</span></div></div>
+              </div>
+            </div>
+          </div>
+          <p class="carousel-label">Settings page — theme selector + currency picker</p>
+        </div>
+
+      </div>
+      <button class="carousel-btn carousel-btn--next" aria-label="Next slide" id="carousel-next">›</button>
+    </div>
+
+    <div class="carousel-dots" role="tablist" aria-label="Carousel navigation" id="carousel-dots"></div>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     11. ABOUT
+     ========================================================= -->
+<section id="about" aria-labelledby="about-heading">
+  <div class="about-inner">
+    <span class="label-pill">ABOUT DRIVEWISE AI</span>
+    <h2 id="about-heading" class="fade-up">Built for Drivers Who Care About Their Cars</h2>
+
+    <p class="fade-up">
+      DriveWise AI was built from a simple frustration — there was no
+      single app that tracked fuel costs, upcoming maintenance, business
+      mileage, <em>and</em> protected your data without demanding an account or
+      an internet connection.
+    </p>
+    <p class="fade-up">
+      We built DriveWise AI to be the app we wanted to use ourselves:
+      offline-first, encrypted by default, with smart features that
+      save time and money at every service station and year-end tax filing.
+    </p>
+    <p class="fade-up">
+      The app supports petrol, diesel, hybrid, and electric vehicles.
+      It works for individual drivers, freelancers tracking business mileage,
+      and fleet managers who need detailed cost records for multiple vehicles.
+    </p>
+
+    <div class="values-grid">
+      <div class="card value-card fade-up">
+        <h4>Privacy First</h4>
+        <p>No accounts. No vehicle data servers. Your information stays on your device.</p>
+      </div>
+      <div class="card value-card fade-up" style="transition-delay:0.1s">
+        <h4>Offline Always</h4>
+        <p>Full functionality without an internet connection. Works anywhere.</p>
+      </div>
+      <div class="card value-card fade-up" style="transition-delay:0.2s">
+        <h4>Constantly Improving</h4>
+        <p>Regular updates based on real driver feedback, covering new vehicle types and tax rules.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     12. CONTACT
+     ========================================================= -->
+<section id="contact" aria-labelledby="contact-heading">
+  <div class="contact-inner">
+    <h2 id="contact-heading" class="fade-up">Get in Touch</h2>
+    <p class="fade-up">Have a question, feature request, or found a bug? We'd love to hear from you.</p>
+
+    <div class="contact-card card fade-up">
+      <div class="contact-email-row">
+        <span aria-hidden="true">✉️</span>
+        <span id="contact-email">support@drivewiseai.com</span>
+        <button class="copy-btn" onclick="copyEmail()" aria-label="Copy email address" id="copy-email-btn">Copy</button>
+      </div>
+      <p class="contact-response text-muted">We typically respond within 24–48 hours.</p>
+    </div>
+
+    <div class="contact-links fade-up">
+      <a href="mailto:support@drivewiseai.com?subject=Bug Report — DriveWise AI"
+         class="btn btn-ghost">🐛 Report a Bug</a>
+      <a href="mailto:support@drivewiseai.com?subject=Feature Request — DriveWise AI"
+         class="btn btn-ghost">💡 Request a Feature</a>
+      <a href="https://play.google.com/store/apps/details?id=com.drivewiseai"
+         class="btn btn-ghost"
+         target="_blank"
+         rel="noopener noreferrer">⭐ Leave a Review</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     13. PRIVACY POLICY
+     ========================================================= -->
+<section id="privacy-policy" aria-labelledby="privacy-policy-heading">
+  <div class="privacy-policy-inner">
+    <h2 id="privacy-policy-heading" class="fade-up">Privacy Policy</h2>
+    <p class="privacy-policy-meta">Last updated: March 2026</p>
+
+    <div class="policy-section fade-up">
+      <h4>13.1 Overview</h4>
+      <p>DriveWise AI is designed to protect your privacy by default. The app operates entirely offline and does not transmit your vehicle data to any external server owned or operated by us.</p>
+    </div>
+
+    <div class="policy-section fade-up">
+      <h4>13.2 Data We Collect</h4>
+      <table class="policy-table" role="table">
+        <thead>
+          <tr><th>Data</th><th>Where Stored</th><th>Leaves Device?</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Vehicle details (make, model, VIN, plate)</td><td>Local encrypted Isar DB</td><td>Only if you export manually</td></tr>
+          <tr><td>Fuel logs &amp; odometer readings</td><td>Local encrypted Isar DB</td><td>Only if you export manually</td></tr>
+          <tr><td>Maintenance records &amp; expenses</td><td>Local encrypted Isar DB</td><td>Only if you export manually</td></tr>
+          <tr><td>Trip logs &amp; business mileage</td><td>Local encrypted Isar DB</td><td>Only if you export manually</td></tr>
+          <tr><td>App preferences (currency, theme)</td><td>SharedPreferences (device)</td><td>Never</td></tr>
+          <tr><td>Location (GPS for station tagging)</td><td>Never persisted</td><td>Never — used in-memory, discarded immediately</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="policy-section fade-up">
+      <h4>13.3 Third-Party Services</h4>
+      <ul role="list">
+        <li><strong>Google AdMob</strong> <em>(Android only)</em> — displays ads after consent is granted (GDPR compliant). Three ad formats: banner ads on list pages, rewarded ads gating premium exports, and frequency-capped interstitial ads shown at most once every three saves. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color:var(--primary);">Google Privacy Policy</a></li>
+        <li><strong>Google Drive</strong> <em>(optional)</em> — stores your encrypted backup in your own Google Drive appDataFolder. DriveWise AI never accesses any other files in your Drive. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color:var(--primary);">Google Privacy Policy</a></li>
+        <li><strong>Dropbox</strong> <em>(optional)</em> — stores your encrypted backup ZIP in your private /Apps/DriveWise AI folder. DriveWise AI never accesses any other Dropbox files. <a href="https://www.dropbox.com/privacy" target="_blank" rel="noopener noreferrer" style="color:var(--primary);">Dropbox Privacy Policy</a></li>
+        <li><strong>Google ML Kit</strong> <em>(on-device only)</em> — OCR text recognition runs entirely on-device; no images are uploaded. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color:var(--primary);">Google Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <div class="policy-section fade-up">
+      <h4>13.4 Advertising &amp; Consent</h4>
+      <p>We display ads via Google AdMob (Android only). On first launch, you are presented with a GDPR consent dialog. You may decline personalised ads — the app remains fully functional with non-personalised ads shown instead.</p>
+      <div class="ad-formats" style="margin-top:16px;">
+        <div class="ad-format"><strong>Banner ads</strong> — shown at the bottom of list pages.</div>
+        <div class="ad-format"><strong>Rewarded ads</strong> — premium export features (Tax Deduction Report, Maintenance &amp; Expense PDF/Excel, Export History) show a "Premium Feature" unlock sheet. Tapping <em>Watch Ad to Unlock</em> plays a short rewarded ad; once the reward is earned the export is generated. Closing the sheet without watching cancels the action — no export is triggered.</div>
+        <div class="ad-format"><strong>Interstitial ads</strong> — shown at most once every three saves across fuel, maintenance, and expense entries combined.</div>
+      </div>
+    </div>
+
+    <div class="policy-section fade-up">
+      <h4>13.5 Data Export &amp; Deletion</h4>
+      <p>You can export all your data at any time from <strong>Privacy &amp; Data → Export My Data</strong> in JSON, PDF, or Excel format. Premium exports are gated behind a short rewarded ad via the Premium Unlock sheet; if the ad fails to load the export proceeds immediately as a fallback.</p>
+      <p style="margin-top:10px;">To permanently delete all data, go to <strong>Privacy &amp; Data → Wipe Data</strong>. This deletes the encrypted database and all secure keys from your device. This action is irreversible.</p>
+    </div>
+
+    <div class="policy-section fade-up">
+      <h4>13.6 Cloud Backup Privacy</h4>
+      <p>If you enable Google Drive backup, your encrypted database is transferred directly between your device and your personal Google Drive appDataFolder. DriveWise AI does not have access to your cloud credentials or the uploaded file contents.</p>
+    </div>
+
+    <div class="policy-section fade-up">
+      <h4>13.7 Contact for Privacy Enquiries</h4>
+      <p>Email: <a href="mailto:support@drivewiseai.com?subject=Privacy Enquiry — DriveWise AI" style="color:var(--primary);">support@drivewiseai.com</a><br>Subject line: Privacy Enquiry — DriveWise AI</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     14. RATINGS STRIP
+     ========================================================= -->
+<section id="ratings" aria-labelledby="ratings-heading">
+  <div class="ratings-strip-inner">
+    <img src="assets/customer-satisfaction.png" class="ratings-icon fade-up" alt="" aria-hidden="true" />
+    <div class="ratings-text fade-up">
+      <h3 id="ratings-heading">Loved by Drivers</h3>
+      <p>Smart, private, and always offline-first.</p>
+    </div>
+    <div class="ratings-stars fade-up" aria-label="5-star rating" role="img">★★★★★</div>
+    <a href="https://play.google.com/store/apps/details?id=com.drivewiseai"
+       class="btn btn-outline-white fade-up"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Rate DriveWise AI on Google Play">
+      ⭐&nbsp; Rate on Google Play
+    </a>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     15. CTA BLOCK
+     ========================================================= -->
+<section id="cta-block" aria-labelledby="cta-heading">
+  <h2 id="cta-heading">Ready to Drive Smarter?</h2>
+  <p>Download DriveWise AI for free. No account. No subscription. Just smart vehicle management on your terms.</p>
+  <div class="cta-badges">
+    <a href="https://play.google.com/store/apps/details?id=com.drivewiseai"
+       class="cta-badge"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Get DriveWise AI on Google Play">
+      ▶&nbsp; Google Play
+    </a>
+
+  </div>
+  <div class="cta-trust">
+    <span>✅ Free to download</span>
+    <span>🔒 No account required</span>
+    <span>📴 Works offline</span>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+<footer role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="assets/circle_splash.png" alt="DriveWise AI logo" class="nav-logo-img" width="36" height="36" />
+          <strong style="font-size:17px;">DriveWise AI</strong>
+        </div>
+        <p>Smart vehicle management for every driver.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.drivewiseai"
+           class="btn btn-ghost"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Get DriveWise AI on Google Play"
+           style="width:fit-content;">
+          ▶&nbsp; Google Play
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4>Links</h4>
+        <ul role="list">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="#" aria-label="Terms of Use (coming soon)">Terms of Use</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul role="list">
+          <li><a href="mailto:support@drivewiseai.com">support@drivewiseai.com</a></li>
+          <li><a href="mailto:support@drivewiseai.com?subject=Bug Report — DriveWise AI">Report a Bug</a></li>
+          <li><a href="mailto:support@drivewiseai.com?subject=Feature Request — DriveWise AI">Request a Feature</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="footer-divider" />
+
+    <div class="footer-bottom">
+      <span>© 2026 DriveWise AI. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="#" aria-label="Terms of Use (coming soon)">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
