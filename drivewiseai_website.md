@@ -362,7 +362,7 @@ We'd love to hear from you.
 
 ```
 [Email row]
-  ✉️  support@drivewiseai.com
+  ✉️  supportdrivewiseai@gmail.com
   [Copy button]
 
 [Response time note — muted]
@@ -463,7 +463,7 @@ available when the iOS version launches.
 
 ### 13.7 Contact for Privacy Enquiries
 ```
-Email: support@drivewiseai.com
+Email: supportdrivewiseai@gmail.com
 Subject line: Privacy Enquiry — DriveWise AI
 ```
 
@@ -494,7 +494,7 @@ Terms of Use
 
 **Column 3 — Connect:**
 ```
-support@drivewiseai.com
+supportdrivewiseai@gmail.com
 
 [Social icons — if applicable]
 ```
