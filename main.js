@@ -156,8 +156,12 @@ window.closeMobileMenu = closeMobileMenu;
   const total       = slides.length;
   let   current     = 0;
   let   autoTimer   = null;
-  const SLIDE_W     = 240 + 24; // flex item width + gap
+  const GAP         = 24;
   const AUTO_DELAY  = 4000;
+
+  function getSlideW() {
+    return slides.length > 0 ? slides[0].offsetWidth + GAP : (240 + GAP);
+  }
 
   // Build dots
   slides.forEach((_, i) => {
@@ -172,7 +176,7 @@ window.closeMobileMenu = closeMobileMenu;
 
   function goTo(index) {
     current = (index + total) % total;
-    carouselTrack.style.transform = `translateX(-${current * SLIDE_W}px)`;
+    carouselTrack.style.transform = `translateX(-${current * getSlideW()}px)`;
     updateDots();
   }
 
@@ -203,6 +207,13 @@ window.closeMobileMenu = closeMobileMenu;
     carouselTrack.parentElement.addEventListener('mouseenter', stopAuto);
     carouselTrack.parentElement.addEventListener('mouseleave', startAuto);
   }
+
+  // Recalculate position on resize (slide width changes at breakpoints)
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => goTo(current), 150);
+  }, { passive: true });
 
   // Swipe support on mobile
   let touchStartX = 0;

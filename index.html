@@ -41,7 +41,7 @@
     </ul>
 
     <div class="nav-right">
-      <a href="/privacy" class="nav-privacy-link">Privacy Policy</a>
+      <a href="/privacy-policy" class="nav-privacy-link">Privacy Policy</a>
       <a href="https://play.google.com/store/apps/details?id=com.drivewiseai"
          class="btn-get-app"
          target="_blank"
@@ -60,7 +60,7 @@
   <a href="#features"      onclick="closeMobileMenu()">Features</a>
   <a href="#about"         onclick="closeMobileMenu()">About</a>
   <a href="#contact"       onclick="closeMobileMenu()">Contact</a>
-  <a href="/privacy" onclick="closeMobileMenu()">Privacy Policy</a>
+  <a href="/privacy-policy" onclick="closeMobileMenu()">Privacy Policy</a>
   <a href="https://play.google.com/store/apps/details?id=com.drivewiseai"
      class="btn btn-primary"
      target="_blank"
@@ -138,7 +138,7 @@
                 <div class="phone-bar" style="height:100%;opacity:1"></div>
               </div>
             </div>
-            <div class="phone-card-mock" style="margin-top:12px;background:rgba(48,209,88,0.08);border-color:rgba(48,209,88,0.2)">
+            <div class="phone-card-mock" style="margin-top:12px;background:rgba(79,142,247,0.08);border-color:rgba(79,142,247,0.2)">
               <div class="phone-card-title" style="color:var(--success)">NEXT SERVICE DUE</div>
               <div style="font-size:12px;font-weight:600;">Oil Change · in 320 km</div>
             </div>
@@ -175,7 +175,7 @@
       <article class="card feature-card fade-up" style="transition-delay:0.2s">
         <img src="assets/telemetry.png" class="feature-icon" alt="" aria-hidden="true" />
         <h4>AI-Powered Insights</h4>
-        <p>Personalised spending insights, an interactive breakdown pie chart, monthly trends, and an AI Assistant — all powered by your real driving data.</p>
+        <p>Smart spending advisor, anomaly detection, predictive maintenance forecasting, one-tap tax PDF generation, report history downloads, and an AI Chat Assistant — all on-device.</p>
       </article>
       <article class="card feature-card fade-up" style="transition-delay:0.3s">
         <img src="assets/tax.png" class="feature-icon" alt="" aria-hidden="true" />
@@ -346,6 +346,57 @@
 
 
 <!-- =========================================================
+     6B. DEEP-DIVE 4 — AI INTELLIGENCE SPOTLIGHT
+     ========================================================= -->
+<section class="deep-dive deep-dive--alt" aria-labelledby="ai-heading">
+  <div class="dive-inner">
+    <div class="dive-content fade-up">
+      <span class="label-pill">AI-POWERED INTELLIGENCE</span>
+      <h3 id="ai-heading">Your Personal Vehicle AI, Always Learning</h3>
+      <p>
+        DriveWise AI's on-device assistant continuously analyses your real driving data — surfacing
+        smart insights, detecting anomalies, predicting service needs, and generating
+        ready-to-download reports. All private, all offline.
+      </p>
+      <ul class="dive-bullets" role="list">
+        <li class="dive-bullet"><span class="dive-bullet-check" aria-hidden="true">✓</span><strong>Smart Spending Advisor</strong> — detects unusual cost spikes and surfaces personalised tips to cut fuel spend</li>
+        <li class="dive-bullet"><span class="dive-bullet-check" aria-hidden="true">✓</span><strong>Efficiency Anomaly Detection</strong> — alerts you when km/L drops significantly vs your personal baseline</li>
+        <li class="dive-bullet"><span class="dive-bullet-check" aria-hidden="true">✓</span><strong>Predictive Maintenance</strong> — forecasts your next service date based on real usage patterns, not just fixed intervals</li>
+        <li class="dive-bullet"><span class="dive-bullet-check" aria-hidden="true">✓</span><strong>One-Tap Tax PDF Download</strong> — AI auto-calculates deductible km and generates a formatted report instantly</li>
+        <li class="dive-bullet"><span class="dive-bullet-check" aria-hidden="true">✓</span><strong>Report History Downloads</strong> — download fuel, maintenance, and expense history as PDF or Excel at any time</li>
+        <li class="dive-bullet"><span class="dive-bullet-check" aria-hidden="true">✓</span><strong>AI Chat Assistant</strong> — ask plain-language questions about your costs and get data-backed answers</li>
+      </ul>
+    </div>
+    <div class="dive-phone fade-up" aria-hidden="true">
+      <div class="dive-phone-frame">
+        <div class="dive-phone-screen">
+          <div style="font-size:13px;font-weight:700;margin-bottom:12px;">AI Assistant</div>
+          <div class="ai-chat">
+            <div class="ai-msg ai-msg--bot">⚠️ Fuel efficiency dropped 18% this week. Possible cause: low tyre pressure. Check all 4 tyres.</div>
+            <div class="ai-msg ai-msg--user">Generate 2026 tax report</div>
+            <div class="ai-msg ai-msg--bot">✓ Done — 1,240 km deductible. Your PDF is ready.</div>
+          </div>
+          <div style="background:var(--primary);border-radius:8px;padding:10px;text-align:center;font-size:11px;font-weight:700;margin-top:10px;cursor:default;">⬇ Download Tax PDF</div>
+          <div style="margin-top:10px;background:rgba(79,142,247,0.1);border:1px solid rgba(79,142,247,0.2);border-radius:10px;padding:10px;">
+            <div style="font-size:10px;color:var(--text-secondary);margin-bottom:4px;">PREDICTIVE MAINTENANCE</div>
+            <div style="font-size:11px;font-weight:600;">Oil change needed in ~14 days</div>
+          </div>
+          <div style="margin-top:8px;background:rgba(79,142,247,0.06);border:1px solid rgba(79,142,247,0.15);border-radius:10px;padding:10px;">
+            <div style="font-size:10px;color:var(--text-secondary);margin-bottom:4px;">DOWNLOAD HISTORY</div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;">
+              <span style="background:var(--primary);border-radius:6px;padding:4px 8px;font-size:9px;font-weight:700;">Fuel PDF</span>
+              <span style="background:var(--primary);border-radius:6px;padding:4px 8px;font-size:9px;font-weight:700;">Maintenance XLS</span>
+              <span style="background:var(--primary);border-radius:6px;padding:4px 8px;font-size:9px;font-weight:700;">Full Report</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================
      7. PRIVACY & SECURITY
      ========================================================= -->
 <section id="privacy-section" aria-labelledby="privacy-sec-heading">
@@ -506,8 +557,8 @@
       <h2 id="screenshots-heading">See It In Action</h2>
     </div>
 
-    <div class="carousel-outer" aria-label="App screenshots carousel" role="region">
-      <button class="carousel-btn carousel-btn--prev" aria-label="Previous slide" id="carousel-prev">‹</button>
+    <div class="carousel-wrapper" role="region" aria-label="App screenshots carousel">
+      <div class="carousel-outer">
       <div class="carousel-track" id="carousel-track" role="list">
 
         <div class="carousel-slide" role="listitem">
@@ -548,7 +599,7 @@
           <div class="carousel-phone">
             <div class="carousel-screen">
               <div style="font-size:11px;font-weight:700;margin-bottom:10px;">Add Fill-Up</div>
-              <div style="background:rgba(48,209,88,0.1);border:1px solid rgba(48,209,88,0.2);border-radius:8px;padding:8px;font-size:10px;margin-bottom:10px;color:var(--success);">📷 OCR pre-filled from receipt</div>
+              <div style="background:rgba(79,142,247,0.1);border:1px solid rgba(79,142,247,0.2);border-radius:8px;padding:8px;font-size:10px;margin-bottom:10px;color:var(--primary);">📷 OCR pre-filled from receipt</div>
               <div class="calc-field"><label style="font-size:10px;">Quantity (L)</label><div class="calc-field-bar" style="height:28px;"></div></div>
               <div class="calc-field"><label style="font-size:10px;">Price per L</label><div class="calc-field-bar" style="height:28px;"></div></div>
               <div class="calc-field"><label style="font-size:10px;">Station</label><div style="height:28px;background:rgba(255,255,255,0.06);border-radius:8px;border:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:flex-end;padding-right:8px;"><span style="font-size:10px;color:var(--primary);">📍 GPS</span></div></div>
@@ -601,10 +652,13 @@
         </div>
 
       </div>
-      <button class="carousel-btn carousel-btn--next" aria-label="Next slide" id="carousel-next">›</button>
+      </div>
+      <div class="carousel-nav">
+        <button class="carousel-btn carousel-btn--prev" aria-label="Previous slide" id="carousel-prev">&#8249;</button>
+        <div class="carousel-dots" role="tablist" aria-label="Carousel navigation" id="carousel-dots"></div>
+        <button class="carousel-btn carousel-btn--next" aria-label="Next slide" id="carousel-next">&#8250;</button>
+      </div>
     </div>
-
-    <div class="carousel-dots" role="tablist" aria-label="Carousel navigation" id="carousel-dots"></div>
   </div>
 </section>
 
@@ -684,76 +738,7 @@
 
 
 <!-- =========================================================
-     13. PRIVACY POLICY
-     ========================================================= -->
-<section id="privacy-policy" aria-labelledby="privacy-policy-heading">
-  <div class="privacy-policy-inner">
-    <h2 id="privacy-policy-heading" class="fade-up">Privacy Policy</h2>
-    <p class="privacy-policy-meta">Last updated: March 2026</p>
-
-    <div class="policy-section fade-up">
-      <h4>13.1 Overview</h4>
-      <p>DriveWise AI is designed to protect your privacy by default. The app operates entirely offline and does not transmit your vehicle data to any external server owned or operated by us.</p>
-    </div>
-
-    <div class="policy-section fade-up">
-      <h4>13.2 Data We Collect</h4>
-      <table class="policy-table" role="table">
-        <thead>
-          <tr><th>Data</th><th>Where Stored</th><th>Leaves Device?</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Vehicle details (make, model, VIN, plate)</td><td>Local encrypted Isar DB</td><td>Only if you export manually</td></tr>
-          <tr><td>Fuel logs &amp; odometer readings</td><td>Local encrypted Isar DB</td><td>Only if you export manually</td></tr>
-          <tr><td>Maintenance records &amp; expenses</td><td>Local encrypted Isar DB</td><td>Only if you export manually</td></tr>
-          <tr><td>Trip logs &amp; business mileage</td><td>Local encrypted Isar DB</td><td>Only if you export manually</td></tr>
-          <tr><td>App preferences (currency, theme)</td><td>SharedPreferences (device)</td><td>Never</td></tr>
-          <tr><td>Location (GPS for station tagging)</td><td>Never persisted</td><td>Never — used in-memory, discarded immediately</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="policy-section fade-up">
-      <h4>13.3 Third-Party Services</h4>
-      <ul role="list">
-        <li><strong>Google AdMob</strong> <em>(Android only)</em> — displays ads after consent is granted (GDPR compliant). Three ad formats: banner ads on list pages, rewarded ads gating premium exports, and frequency-capped interstitial ads shown at most once every three saves. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color:var(--primary);">Google Privacy Policy</a></li>
-        <li><strong>Google Drive</strong> <em>(optional)</em> — stores your encrypted backup in your own Google Drive appDataFolder. DriveWise AI never accesses any other files in your Drive. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color:var(--primary);">Google Privacy Policy</a></li>
-        <li><strong>Dropbox</strong> <em>(optional)</em> — stores your encrypted backup ZIP in your private /Apps/DriveWise AI folder. DriveWise AI never accesses any other Dropbox files. <a href="https://www.dropbox.com/privacy" target="_blank" rel="noopener noreferrer" style="color:var(--primary);">Dropbox Privacy Policy</a></li>
-        <li><strong>Google ML Kit</strong> <em>(on-device only)</em> — OCR text recognition runs entirely on-device; no images are uploaded. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color:var(--primary);">Google Privacy Policy</a></li>
-      </ul>
-    </div>
-
-    <div class="policy-section fade-up">
-      <h4>13.4 Advertising &amp; Consent</h4>
-      <p>We display ads via Google AdMob (Android only). On first launch, you are presented with a GDPR consent dialog. You may decline personalised ads — the app remains fully functional with non-personalised ads shown instead.</p>
-      <div class="ad-formats" style="margin-top:16px;">
-        <div class="ad-format"><strong>Banner ads</strong> — shown at the bottom of list pages.</div>
-        <div class="ad-format"><strong>Rewarded ads</strong> — premium export features (Tax Deduction Report, Maintenance &amp; Expense PDF/Excel, Export History) show a "Premium Feature" unlock sheet. Tapping <em>Watch Ad to Unlock</em> plays a short rewarded ad; once the reward is earned the export is generated. Closing the sheet without watching cancels the action — no export is triggered.</div>
-        <div class="ad-format"><strong>Interstitial ads</strong> — shown at most once every three saves across fuel, maintenance, and expense entries combined.</div>
-      </div>
-    </div>
-
-    <div class="policy-section fade-up">
-      <h4>13.5 Data Export &amp; Deletion</h4>
-      <p>You can export all your data at any time from <strong>Privacy &amp; Data → Export My Data</strong> in JSON, PDF, or Excel format. Premium exports are gated behind a short rewarded ad via the Premium Unlock sheet; if the ad fails to load the export proceeds immediately as a fallback.</p>
-      <p style="margin-top:10px;">To permanently delete all data, go to <strong>Privacy &amp; Data → Wipe Data</strong>. This deletes the encrypted database and all secure keys from your device. This action is irreversible.</p>
-    </div>
-
-    <div class="policy-section fade-up">
-      <h4>13.6 Cloud Backup Privacy</h4>
-      <p>If you enable Google Drive backup, your encrypted database is transferred directly between your device and your personal Google Drive appDataFolder. DriveWise AI does not have access to your cloud credentials or the uploaded file contents.</p>
-    </div>
-
-    <div class="policy-section fade-up">
-      <h4>13.7 Contact for Privacy Enquiries</h4>
-      <p>Email: <a href="mailto:supportdrivewiseai@gmail.com?subject=Privacy Enquiry — DriveWise AI" style="color:var(--primary);">supportdrivewiseai@gmail.com</a><br>Subject line: Privacy Enquiry — DriveWise AI</p>
-    </div>
-  </div>
-</section>
-
-
-<!-- =========================================================
-     14. RATINGS STRIP
+     13. RATINGS STRIP
      ========================================================= -->
 <section id="ratings" aria-labelledby="ratings-heading">
   <div class="ratings-strip-inner">
@@ -825,7 +810,7 @@
           <li><a href="#features">Features</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
           <li><a href="#" aria-label="Terms of Use (coming soon)">Terms of Use</a></li>
         </ul>
       </div>
@@ -844,7 +829,7 @@
     <div class="footer-bottom">
       <span>© 2026 DriveWise AI. All rights reserved.</span>
       <div class="footer-bottom-links">
-        <a href="/privacy">Privacy Policy</a>
+        <a href="/privacy-policy">Privacy Policy</a>
         <a href="#" aria-label="Terms of Use (coming soon)">Terms of Use</a>
       </div>
     </div>
