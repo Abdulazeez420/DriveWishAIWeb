@@ -1023,6 +1023,10 @@ footer {
   .nav-links        { display: none; }
   .nav-privacy-link { display: none; }
   .hamburger        { display: flex; }
+  .nav-logo         { white-space: nowrap; font-size: 14px; gap: 6px; }
+  .nav-logo-img     { width: 28px; height: 28px; }
+  .nav-right        { gap: 10px; }
+  .btn-get-app      { padding: 8px 14px; font-size: 12px; }
 
   /* Features grid */
   .features-grid    { grid-template-columns: 1fr; }
@@ -1075,6 +1079,7 @@ footer {
   #screenshots                  { padding: 64px 0; }
   #screenshots .container       { padding: 0; }
   #screenshots .screenshots-header { padding: 0 24px; margin-bottom: 40px; }
+  .carousel-outer               { padding-left: 44px; }
   .carousel-slide               { flex: 0 0 calc(100vw - 88px); }
   .carousel-btn                 { width: 44px; height: 44px; font-size: 22px; }
   .carousel-nav                 { gap: 12px; margin-top: 16px; }
