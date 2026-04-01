@@ -71,7 +71,7 @@ FOOTER
 
 ```
 [Pill badge — electric blue outline]
-  🚗  Smart Vehicle Management · AI-Powered
+  🚗  Smart Vehicle Management · On-Device AI Insights
 ```
 
 ```
@@ -124,7 +124,7 @@ export tax-ready reports — all encrypted on your device.
 | 3 | 📊 | Spending Analytics | Interactive charts for monthly spend, cost trends, and category breakdowns — all in your local currency. |
 | 4 | 📋 | Tax & Trip Logging | Record business vs personal trips. Generate a PDF tax deduction report in seconds. |
 | 5 | 🔒 | Privacy-First Security | AES-256 encrypted Isar database. Your data never leaves your device unless you choose to export it. |
-| 6 | ☁️ | Cloud Backup & Restore | Serverless sync to Google Drive. Auto-backup on a schedule you choose — daily, weekly, or monthly. No account required on our end. |
+| 6 | ☁️ | Cloud Backup & Restore | Serverless sync to Google Drive and Dropbox. Auto-backup on a schedule you choose — daily, weekly, or monthly. No DriveWise account required. |
 
 **Card style:** `background: #1C1C1E`, `border: 1px solid rgba(255,255,255,0.06)`, `border-radius: 16px`, hover lifts with blue border glow.
 
@@ -263,7 +263,7 @@ Shows input fields (odometer start/end, fuel used, price/L) and output metrics (
 [H2]  Your Backup. On Your Terms.
 [Subtext]
 No proprietary cloud. Sync your encrypted database directly to
-Google Drive or iCloud — providers you already trust.
+Google Drive or Dropbox — providers you already trust.
 ```
 
 **Two side-by-side provider cards:**
@@ -273,16 +273,16 @@ Google Drive or iCloud — providers you already trust.
 - "Backs up to your private appDataFolder — invisible to other apps"
 - Features: ZIP compression, auto-deduplication, timestamp tracking, configurable auto-backup frequency (daily / weekly / monthly)
 
-**iCloud Card** *(coming soon — iOS)*
-- Icon: iCloud logo
-- "Backs up to your app-private iCloud container"
-- Features: Progress tracking, automatic cleanup, multi-device access
+**Dropbox Card**
+- Icon: Dropbox logo
+- "Backs up to your app-private /Apps/DriveWise AI folder"
+- Features: ZIP upload, timestamp history, merge-based restore (adds missing records without deleting existing local entries)
 
 **Auto-backup note (centred):**
 > Enable auto-backup in Settings → Backup & Sync. DriveWise AI checks your chosen frequency on every app launch and backs up automatically when due.
 
 **Restore note (centred, muted):**
-> Restore replaces local data after a confirmation dialog. All data remains encrypted end-to-end throughout the process.
+> Google Drive restore replaces local data; Dropbox restore merges missing records into local data. All backup files remain encrypted end-to-end.
 
 ---
 
@@ -362,7 +362,7 @@ We'd love to hear from you.
 
 ```
 [Email row]
-  ✉️  supportdrivewiseai@gmail.com
+  ✉️  support@drivewiseai.com
   [Copy button]
 
 [Response time note — muted]
@@ -386,7 +386,7 @@ We'd love to hear from you.
 
 ```
 [H2]  Privacy Policy
-[Meta — muted]  Last updated: March 2026
+[Meta — muted]  Last updated: April 2026
 ```
 
 **Sub-sections:**
@@ -414,10 +414,12 @@ vehicle data to any external server owned or operated by us.
 DriveWise AI integrates with the following third-party services.
 Each operates under its own privacy policy:
 ```
-- **Google AdMob** *(Android only)* — displays ads after consent is granted (GDPR compliant). Three ad formats are used: banner ads on list pages, rewarded ads gating PDF exports, and frequency-capped interstitial ads shown at most once every three saves. [Google Privacy Policy](https://policies.google.com/privacy)
+- **Google AdMob** *(Android only)* — displays ads after consent is granted (GDPR compliant). Three ad formats are used: banner ads on list pages, rewarded ads gating premium exports and AI Assistant analysis, and frequency-capped interstitial ads shown at most once every three saves. Users can also purchase a one-time Remove Ads entitlement. [Google Privacy Policy](https://policies.google.com/privacy)
 - **Google Drive** *(optional)* — stores your encrypted backup in your own Google Drive appDataFolder. [Google Privacy Policy](https://policies.google.com/privacy)
-- **iCloud** *(optional, iOS — coming soon)* — stores your encrypted backup in your own iCloud container. [Apple Privacy Policy](https://www.apple.com/legal/privacy/)
+- **Dropbox** *(optional)* — stores your encrypted backup in your own app folder (`/Apps/DriveWise AI`). [Dropbox Privacy Policy](https://www.dropbox.com/privacy)
 - **Google ML Kit** *(on-device only)* — OCR text recognition runs entirely on-device; no images are uploaded. [Google Privacy Policy](https://policies.google.com/privacy)
+- **Firebase Crashlytics** *(app diagnostics)* — captures crash reports to improve stability. [Google Privacy Policy](https://policies.google.com/privacy)
+- **Firebase Analytics** *(product analytics)* — helps measure feature usage and app quality trends. [Google Privacy Policy](https://policies.google.com/privacy)
 
 ### 13.4 Advertising & Consent
 ```
@@ -428,11 +430,16 @@ instead.
 
 Ad formats used:
 • Banner ads — shown at the bottom of list pages.
-• Rewarded ads — shown when you choose to generate a PDF export.
-  Watching the short ad unlocks the export; declining still
-  completes the export after a brief delay.
+• Rewarded ads — shown when you choose premium export actions
+  (Tax Report, Export History, PDF, Excel) and when running
+  AI Assistant analysis from the dedicated assistant page.
+  If a rewarded ad fails to load, the requested action proceeds
+  immediately as a fallback.
 • Interstitial ads — shown at most once every three saves across
   fuel, maintenance, and expense entries combined.
+
+Users can also purchase a one-time "Remove Ads" entitlement via
+Google Play Billing to disable all ads permanently.
 
 When an iOS version is released, Apple's App Tracking Transparency
 (ATT) prompt will be shown before any ad identifier is accessed.
@@ -443,9 +450,8 @@ When an iOS version is released, Apple's App Tracking Transparency
 You can export all your data at any time from Privacy & Data → Export
 My Data in JSON, PDF, or Excel format. Each export is gated behind a
 short rewarded ad; if the ad fails to load the export proceeds
-immediately. Sensitive fields (VIN, plate number) are masked by default
-and can be unmasked via the "Export Decrypted Data" toggle in Settings
-after reviewing the security notice.
+immediately. Exports include real field values (including VIN and plate
+number) exactly as stored on-device.
 
 To permanently delete all data, go to Privacy & Data → Wipe Data.
 This deletes the encrypted database and all secure keys from your device.
@@ -457,13 +463,17 @@ This action is irreversible.
 If you enable Google Drive backup, your encrypted database is
 transferred directly between your device and your personal Google Drive
 appDataFolder. DriveWise AI does not have access to your cloud
-credentials or the uploaded file contents. iCloud backup will be
-available when the iOS version launches.
+credentials or the uploaded file contents.
+
+If you enable Dropbox backup, the encrypted ZIP is transferred directly
+between your device and your Dropbox app folder. Google Drive restores
+replace the local database file, while Dropbox restores merge missing
+records into the existing local database.
 ```
 
 ### 13.7 Contact for Privacy Enquiries
 ```
-Email: supportdrivewiseai@gmail.com
+Email: support@drivewiseai.com
 Subject line: Privacy Enquiry — DriveWise AI
 ```
 
@@ -494,7 +504,7 @@ Terms of Use
 
 **Column 3 — Connect:**
 ```
-supportdrivewiseai@gmail.com
+support@drivewiseai.com
 
 [Social icons — if applicable]
 ```

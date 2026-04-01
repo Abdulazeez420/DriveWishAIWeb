@@ -362,11 +362,11 @@
     <span>DriveWise AI</span>
   </div>
   <h1>Privacy Policy</h1>
-  <p class="pp-hero-meta">Last updated: March 2026</p>
+  <p class="pp-hero-meta">Last updated: April 2026</p>
   <div class="pp-hero-badges">
     <span class="pp-hero-badge">🔒 AES-256 Encrypted</span>
     <span class="pp-hero-badge">📴 100% Offline</span>
-    <span class="pp-hero-badge">👁️ Zero Telemetry</span>
+    <span class="pp-hero-badge">👁️ No Vehicle Telemetry</span>
   </div>
 </div>
 
@@ -480,8 +480,9 @@
           </div>
           <p>
             Displays ads after consent is granted (GDPR compliant). Three ad formats are used:
-            banner ads on list pages, rewarded ads gating PDF exports, and frequency-capped interstitial
-            ads shown at most once every three saves across fuel, maintenance, and expense entries.
+            banner ads on list pages, rewarded ads gating premium exports and AI Assistant analysis,
+            and frequency-capped interstitial ads shown at most once every three saves across fuel,
+            maintenance, and expense entries. Users can purchase a one-time Remove Ads entitlement.
           </p>
           <p><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy →</a></p>
         </div>
@@ -495,6 +496,43 @@
             If you enable backup, your encrypted database is stored in your own Google Drive
             <code style="background:rgba(255,255,255,0.07);padding:1px 6px;border-radius:4px;font-size:12px;">appDataFolder</code>
             — invisible to all other apps. DriveWise AI does not have access to the rest of your Drive.
+          </p>
+          <p><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy →</a></p>
+        </div>
+
+        <div class="pp-service">
+          <div class="pp-service-name">
+            Dropbox
+            <span class="pp-service-tag">Optional</span>
+          </div>
+          <p>
+            If enabled, encrypted backup ZIPs are stored in your Dropbox app folder
+            <code style="background:rgba(255,255,255,0.07);padding:1px 6px;border-radius:4px;font-size:12px;">/Apps/DriveWise AI</code>.
+            DriveWise AI does not access your other Dropbox files.
+          </p>
+          <p><a href="https://www.dropbox.com/privacy" target="_blank" rel="noopener noreferrer">Dropbox Privacy Policy →</a></p>
+        </div>
+
+        <div class="pp-service">
+          <div class="pp-service-name">
+            Firebase Crashlytics
+            <span class="pp-service-tag">Diagnostics</span>
+          </div>
+          <p>
+            Collects crash diagnostics to improve stability and reliability. It does not collect
+            your vehicle log content.
+          </p>
+          <p><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy →</a></p>
+        </div>
+
+        <div class="pp-service">
+          <div class="pp-service-name">
+            Firebase Analytics
+            <span class="pp-service-tag">Product analytics</span>
+          </div>
+          <p>
+            Helps measure app usage and feature quality trends. Vehicle records remain stored
+            locally in the encrypted on-device database.
           </p>
           <p><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy →</a></p>
         </div>
@@ -537,7 +575,7 @@
           <div class="pp-ad-icon" aria-hidden="true">🎬</div>
           <div>
             <div class="pp-ad-name">Rewarded Ads</div>
-            <p class="pp-ad-desc">Short video ads shown when you choose to generate a PDF export or Tax Report. Watching the ad unlocks the export. If the ad fails to load, the export proceeds immediately as a fallback — you are never blocked.</p>
+            <p class="pp-ad-desc">Short video ads shown when you choose premium exports (Tax Report, Export History, PDF, Excel) or run AI Assistant analysis. If the ad fails to load, the requested action proceeds immediately as fallback — you are never blocked.</p>
           </div>
         </div>
         <div class="pp-ad-format">
@@ -548,6 +586,9 @@
           </div>
         </div>
       </div>
+      <p>
+        You can also purchase a one-time <strong style="color:#fff;">Remove Ads</strong> entitlement via Google Play Billing to disable all ads permanently.
+      </p>
     </section>
 
     <!-- 5. Data Export & Deletion -->
@@ -559,9 +600,8 @@
       <p>
         You can export all your data at any time from <strong style="color:#fff;">Privacy &amp; Data → Export My Data</strong>
         in JSON, PDF, or Excel format. Each export is gated behind a short rewarded ad; if the ad
-        fails to load the export proceeds immediately. Sensitive fields (VIN, plate number) are masked
-        by default and can be unmasked via the <strong style="color:#fff;">"Export Decrypted Data"</strong>
-        toggle in Settings after reviewing the security notice.
+        fails to load the export proceeds immediately. Exports include real stored values (including VIN
+        and plate number).
       </p>
       <p>
         To permanently delete all data, go to <strong style="color:#fff;">Privacy &amp; Data → Wipe Data</strong>.
@@ -583,9 +623,15 @@
         DriveWise AI does not have access to your Google credentials or the contents of the uploaded file.
       </p>
       <p>
-        The backup file is compressed (ZIP), timestamped, and auto-deduplicated so only the latest
+        Google Drive backups are compressed (ZIP), timestamped, and auto-deduplicated so only the latest
         backup is retained. You control backup frequency (daily / weekly / monthly) from
         <strong style="color:#fff;">Settings → Backup &amp; Sync</strong>.
+      </p>
+      <p>
+        If you enable Dropbox backup, the encrypted ZIP is transferred directly between your device and
+        your Dropbox app folder (<code style="background:rgba(255,255,255,0.07);padding:1px 6px;border-radius:4px;font-size:13px;">/Apps/DriveWise AI</code>).
+        Google Drive restores replace the local database, while Dropbox restores merge missing records
+        into existing local data.
       </p>
     </section>
 

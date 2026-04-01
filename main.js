@@ -16,6 +16,62 @@ const carouselPrev  = document.getElementById('carousel-prev');
 const carouselNext  = document.getElementById('carousel-next');
 const heroCanvas    = document.getElementById('hero-canvas');
 const copyBtn       = document.getElementById('copy-email-btn');
+const heroTitle     = document.querySelector('.hero-title');
+const heroSub       = document.querySelector('.hero-sub');
+const heroPrimaryCta = document.querySelector('.hero-ctas .btn-primary');
+const ctaHeading    = document.getElementById('cta-heading');
+const ctaSub        = document.querySelector('#cta-block > p');
+const ctaPrimaryBtn = document.querySelector('#cta-block .cta-badges .cta-badge');
+
+
+// =========================================================
+// 0. HERO COPY A/B TEST (sticky per browser)
+// =========================================================
+(function initHeroCopyVariant() {
+  if (!heroTitle || !heroSub || !heroPrimaryCta) return;
+
+  const STORAGE_KEY = 'dw_hero_copy_variant_v1';
+  let variant = localStorage.getItem(STORAGE_KEY);
+
+  if (variant !== 'A' && variant !== 'B') {
+    variant = Math.random() < 0.5 ? 'A' : 'B';
+    localStorage.setItem(STORAGE_KEY, variant);
+  }
+
+  if (variant === 'B') {
+    heroTitle.innerHTML = 'Cut Car Costs.<br>Stay Service-Ready.<br>Drive with Confidence.';
+    heroSub.textContent = 'Track every fuel stop, maintenance job, trip, and expense in one private app built to work fully offline.';
+    heroPrimaryCta.innerHTML = '▶&nbsp; Start Free on Android';
+    heroPrimaryCta.setAttribute('aria-label', 'Start free on Android via Google Play');
+  }
+
+  document.body.setAttribute('data-hero-copy-variant', variant);
+})();
+
+
+// =========================================================
+// 0B. CTA BLOCK COPY A/B TEST (sticky per browser)
+// =========================================================
+(function initBottomCtaCopyVariant() {
+  if (!ctaHeading || !ctaSub || !ctaPrimaryBtn) return;
+
+  const STORAGE_KEY = 'dw_cta_copy_variant_v1';
+  let variant = localStorage.getItem(STORAGE_KEY);
+
+  if (variant !== 'A' && variant !== 'B') {
+    variant = Math.random() < 0.5 ? 'A' : 'B';
+    localStorage.setItem(STORAGE_KEY, variant);
+  }
+
+  if (variant === 'B') {
+    ctaHeading.textContent = 'Start Tracking Smarter Today';
+    ctaSub.textContent = 'Install DriveWise AI and keep fuel, maintenance, trips, and expenses organized from day one.';
+    ctaPrimaryBtn.innerHTML = '▶&nbsp; Install on Google Play';
+    ctaPrimaryBtn.setAttribute('aria-label', 'Install DriveWise AI on Google Play');
+  }
+
+  document.body.setAttribute('data-cta-copy-variant', variant);
+})();
 
 
 // =========================================================
