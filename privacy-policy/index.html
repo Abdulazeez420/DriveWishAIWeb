@@ -6,6 +6,7 @@
   <title>Privacy Policy — DriveWise AI</title>
   <meta name="description" content="DriveWise AI Privacy Policy — your data stays on your device, always." />
   <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://drivewiseai.in/privacy-policy" />
 
   <!-- Favicon setup -->
   <link rel="icon" href="/assets/circle_splash.png" />
@@ -16,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
   <style>
     /* ── Privacy page overrides ─────────────────────────── */
     body { background: var(--bg-dark); }
@@ -315,7 +316,7 @@
   <div class="nav-inner">
 
     <a href="/" class="nav-logo" aria-label="DriveWise AI home">
-      <img src="assets/circle_splash.png" alt="DriveWise AI logo" class="nav-logo-img" width="36" height="36" />
+      <img src="/assets/circle_splash.png" alt="DriveWise AI logo" class="nav-logo-img" width="36" height="36" />
       DriveWise AI
     </a>
 
@@ -358,16 +359,16 @@
      ========================================================= -->
 <div class="pp-hero">
   <div class="pp-hero-logo">
-    <img src="assets/logo.png" alt="DriveWise AI app icon" />
+    <img src="/assets/logo.png" alt="DriveWise AI app icon" />
     <span>DriveWise AI</span>
   </div>
   <h1>Privacy Policy</h1>
-  <p class="pp-hero-meta">Last updated: April 2026 &mdash; Phase 7: edge-to-edge UI &amp; reliable background sync</p>
+  <p class="pp-hero-meta">Last updated: April 2026</p>
   <div class="pp-hero-badges">
     <span class="pp-hero-badge">🔒 AES-256 Encrypted</span>
     <span class="pp-hero-badge">📴 100% Offline</span>
     <span class="pp-hero-badge">👁️ No Vehicle Telemetry</span>
-    <span class="pp-hero-badge">📱 Edge-to-Edge Display</span>
+    <span class="pp-hero-badge">☁️ Auto Backup by Default</span>
   </div>
 </div>
 
@@ -381,12 +382,12 @@
   <aside class="pp-toc" aria-label="Table of contents">
     <p class="pp-toc-title">On this page</p>
     <ul role="list">
-      <li><a href="#pp-overview"    class="toc-link">Overview</a></li>
-      <li><a href="#pp-data"        class="toc-link">Data We Collect</a></li>
-      <li><a href="#pp-third-party" class="toc-link">Third-Party Services</a></li>
-      <li><a href="#pp-ads"         class="toc-link">Advertising &amp; Consent</a></li>
-      <li><a href="#pp-export"      class="toc-link">Data Export &amp; Deletion</a></li>
-      <li><a href="#pp-backup"      class="toc-link">Cloud Backup Privacy</a></li>
+      <li><a href="#pp-overview"    class="toc-link">1. Overview</a></li>
+      <li><a href="#pp-data"        class="toc-link">2. Data We Collect</a></li>
+      <li><a href="#pp-third-party" class="toc-link">3. Third-Party Services</a></li>
+      <li><a href="#pp-ads"         class="toc-link">4. Advertising &amp; Consent</a></li>
+      <li><a href="#pp-export"      class="toc-link">5. Data Export &amp; Deletion</a></li>
+      <li><a href="#pp-backup"      class="toc-link">6. Cloud Backup &amp; Auto Sync</a></li>
       <li><a href="#pp-contact"     class="toc-link">Contact Us</a></li>
     </ul>
   </aside>
@@ -613,37 +614,45 @@
       </p>
     </section>
 
-    <!-- 6. Cloud Backup Privacy -->
+    <!-- 6. Cloud Backup & Auto Sync -->
     <section class="pp-section fade-up" id="pp-backup" aria-labelledby="pp-backup-h">
       <div class="pp-section-header">
         <div class="pp-section-num">6</div>
-        <h2 id="pp-backup-h">Cloud Backup Privacy</h2>
+        <h2 id="pp-backup-h">Cloud Backup &amp; Auto Sync</h2>
       </div>
       <p>
-        If you enable Google Drive backup, your encrypted Isar database is transferred directly
-        between your device and your personal Google Drive
-        <code style="background:rgba(255,255,255,0.07);padding:1px 6px;border-radius:4px;font-size:13px;">appDataFolder</code>.
-        DriveWise AI does not have access to your Google credentials or the contents of the uploaded file.
+        Once you complete your first successful backup or restore for a provider, DriveWise AI
+        <strong style="color:#fff;">enables automatic backup by default</strong> — no additional
+        configuration required. The app silently backs up your encrypted database each time it is
+        brought to the foreground, provided the configured interval (Daily, Weekly, or Monthly) has
+        elapsed since the last successful run. You can adjust the backup frequency at any time from
+        <strong style="color:#fff;">Backup &amp; Sync</strong> in the app — it is not limited to the
+        Settings page.
       </p>
       <p>
-        Google Drive backups are compressed (ZIP), timestamped, and auto-deduplicated so only the latest
-        backup is retained. You control backup frequency (daily / weekly / monthly) from
-        <strong style="color:#fff;">Settings → Backup &amp; Sync</strong>.
+        If you connect <strong style="color:#fff;">Google Drive</strong>, your encrypted Isar database
+        is transferred directly to your personal Google Drive
+        <code style="background:rgba(255,255,255,0.07);padding:1px 6px;border-radius:4px;font-size:13px;">appDataFolder</code>
+        — invisible to all other apps. DriveWise AI does not have access to your Google credentials
+        or the contents of the uploaded file. Backups are compressed (ZIP), timestamped, and
+        auto-deduplicated so only the latest backup is retained. A Google Drive restore fully
+        replaces your local database.
       </p>
       <p>
-        If you enable Dropbox backup, the encrypted ZIP is transferred directly between your device and
-        your Dropbox app folder (<code style="background:rgba(255,255,255,0.07);padding:1px 6px;border-radius:4px;font-size:13px;">/Apps/DriveWise AI</code>).
-        Google Drive restores replace the local database, while Dropbox restores merge missing records
-        into existing local data. If Dropbox has not yet been connected, scheduled auto-backups skip
-        silently — the app never triggers an OAuth browser prompt in the background.
+        If you connect <strong style="color:#fff;">Dropbox</strong>, encrypted ZIP backups are stored
+        in your Dropbox app folder
+        (<code style="background:rgba(255,255,255,0.07);padding:1px 6px;border-radius:4px;font-size:13px;">/Apps/DriveWise AI</code>).
+        DriveWise AI does not access your other Dropbox files. Dropbox restores merge missing records
+        into your existing local data. If Dropbox has not been connected in the current session,
+        scheduled auto-backups skip silently — the app never opens a browser or OAuth prompt in the
+        background without your explicit action.
       </p>
     </section>
 
-    <!-- 7. Contact -->
+    <!-- Contact -->
     <section class="pp-section fade-up" id="pp-contact" aria-labelledby="pp-contact-h">
       <div class="pp-section-header">
-        <div class="pp-section-num">7</div>
-        <h2 id="pp-contact-h">Contact for Privacy Enquiries</h2>
+        <h2 id="pp-contact-h" style="margin:0;">Contact for Privacy Enquiries</h2>
       </div>
       <p>If you have any questions about this Privacy Policy or how your data is handled, please reach out:</p>
       <div class="pp-contact-box">
@@ -669,7 +678,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-logo">
-          <img src="assets/circle_splash.png" alt="DriveWise AI logo" class="nav-logo-img" width="36" height="36" />
+          <img src="/assets/circle_splash.png" alt="DriveWise AI logo" class="nav-logo-img" width="36" height="36" />
           <strong style="font-size:17px;">DriveWise AI</strong>
         </div>
         <p>Smart vehicle management for every driver.</p>
@@ -685,9 +694,9 @@
       <div class="footer-col">
         <h4>Links</h4>
         <ul role="list">
-          <li><a href="index.html#features">Features</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="/#features">Features</a></li>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/#contact">Contact</a></li>
           <li><a href="/privacy-policy" aria-current="page">Privacy Policy</a></li>
           <li><a href="#" aria-label="Terms of Use (coming soon)">Terms of Use</a></li>
         </ul>
@@ -712,7 +721,7 @@
   </div>
 </footer>
 
-<script src="main.js"></script>
+<script src="/main.js"></script>
 <script>
   // ── TOC active link highlight on scroll ──────────────────
   (function initTocHighlight() {
