@@ -96,7 +96,7 @@ export tax-ready reports — all encrypted on your device.
 
 ```
 [Trust badges row — small icons + text]
-🔒 Encrypted on-device   ·   📶 100% Offline   ·   🌙 Light & Dark Mode
+🔒 Encrypted on-device   ·   📶 100% Offline   ·   🌙 Light & Dark Mode   ·   📱 Edge-to-Edge Display
 ```
 
 **Right column:** iPhone/Android frame with dashboard screenshot. Add subtle gradient glow behind phone in primary blue.
@@ -124,7 +124,7 @@ export tax-ready reports — all encrypted on your device.
 | 3 | 📊 | Spending Analytics | Interactive charts for monthly spend, cost trends, and category breakdowns — all in your local currency. |
 | 4 | 📋 | Tax & Trip Logging | Record business vs personal trips. Generate a PDF tax deduction report in seconds. |
 | 5 | 🔒 | Privacy-First Security | AES-256 encrypted Isar database. Your data never leaves your device unless you choose to export it. |
-| 6 | ☁️ | Cloud Backup & Restore | Serverless sync to Google Drive and Dropbox. Auto-backup on a schedule you choose — daily, weekly, or monthly. No DriveWise account required. |
+| 6 | ☁️ | Cloud Backup & Restore | Serverless sync to Google Drive and Dropbox. Auto-backup on a schedule you choose — daily, weekly, or monthly. Runs silently in the background. No DriveWise account required. |
 
 **Card style:** `background: #1C1C1E`, `border: 1px solid rgba(255,255,255,0.06)`, `border-radius: 16px`, hover lifts with blue border glow.
 
@@ -276,7 +276,7 @@ Google Drive or Dropbox — providers you already trust.
 **Dropbox Card**
 - Icon: Dropbox logo
 - "Backs up to your app-private /Apps/DriveWise AI folder"
-- Features: ZIP upload, timestamp history, merge-based restore (adds missing records without deleting existing local entries)
+- Features: ZIP upload, timestamp history, merge-based restore (adds missing records without deleting existing local entries), graceful background handling (auto-backup silently skips if Dropbox has not yet been connected, never prompting mid-session)
 
 **Auto-backup note (centred):**
 > Enable auto-backup in Settings → Backup & Sync. DriveWise AI checks your chosen frequency on every app launch and backs up automatically when due.
@@ -386,7 +386,7 @@ We'd love to hear from you.
 
 ```
 [H2]  Privacy Policy
-[Meta — muted]  Last updated: April 2026
+[Meta — muted]  Last updated: April 2026 (Phase 7 — edge-to-edge UI, reliable background sync)
 ```
 
 **Sub-sections:**

@@ -362,11 +362,12 @@
     <span>DriveWise AI</span>
   </div>
   <h1>Privacy Policy</h1>
-  <p class="pp-hero-meta">Last updated: April 2026</p>
+  <p class="pp-hero-meta">Last updated: April 2026 &mdash; Phase 7: edge-to-edge UI &amp; reliable background sync</p>
   <div class="pp-hero-badges">
     <span class="pp-hero-badge">🔒 AES-256 Encrypted</span>
     <span class="pp-hero-badge">📴 100% Offline</span>
     <span class="pp-hero-badge">👁️ No Vehicle Telemetry</span>
+    <span class="pp-hero-badge">📱 Edge-to-Edge Display</span>
   </div>
 </div>
 
@@ -508,7 +509,9 @@
           <p>
             If enabled, encrypted backup ZIPs are stored in your Dropbox app folder
             <code style="background:rgba(255,255,255,0.07);padding:1px 6px;border-radius:4px;font-size:12px;">/Apps/DriveWise AI</code>.
-            DriveWise AI does not access your other Dropbox files.
+            DriveWise AI does not access your other Dropbox files. Auto-backup silently skips if
+            Dropbox has not yet been connected in the current session — the app never opens a
+            browser or OAuth prompt in the background without your explicit action.
           </p>
           <p><a href="https://www.dropbox.com/privacy" target="_blank" rel="noopener noreferrer">Dropbox Privacy Policy →</a></p>
         </div>
@@ -631,7 +634,8 @@
         If you enable Dropbox backup, the encrypted ZIP is transferred directly between your device and
         your Dropbox app folder (<code style="background:rgba(255,255,255,0.07);padding:1px 6px;border-radius:4px;font-size:13px;">/Apps/DriveWise AI</code>).
         Google Drive restores replace the local database, while Dropbox restores merge missing records
-        into existing local data.
+        into existing local data. If Dropbox has not yet been connected, scheduled auto-backups skip
+        silently — the app never triggers an OAuth browser prompt in the background.
       </p>
     </section>
 
