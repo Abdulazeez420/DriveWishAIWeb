@@ -121,7 +121,7 @@ export tax-ready reports — all encrypted on your device.
 | :- | :-- | :--- | :--- |
 | 1 | ⛽ | Fuel & Charging Tracker | Log every fill-up with auto-calculated totals, GPS station detection, and OCR receipt scanning. |
 | 2 | 🔧 | Maintenance Scheduler | Schedule oil changes, tyre rotations and more by date or mileage. Get notified before they're overdue. |
-| 3 | 📊 | Spending Analytics | Interactive charts for monthly spend, cost trends, and category breakdowns — all in your local currency. |
+| 3 | 📊 | Spending Analytics | Navigate month-by-month with interactive `< April 2026 >` controls. Filter by vehicle or view all combined — charts, totals, and breakdowns update instantly. |
 | 4 | 📋 | Tax & Trip Logging | Record business vs personal trips. Generate a PDF tax deduction report in seconds. |
 | 5 | 🔒 | Privacy-First Security | AES-256 encrypted Isar database. Your data never leaves your device unless you choose to export it. |
 | 6 | ☁️ | Cloud Backup & Restore | Serverless sync to Google Drive and Dropbox. Auto-backup on a schedule you choose — daily, weekly, or monthly. Runs silently in the background. No DriveWise account required. |
@@ -294,7 +294,7 @@ Google Drive or Dropbox — providers you already trust.
 ```
 
 **Horizontal scrollable carousel (auto-play, 4 s interval) of 6 phone mockups:**
-1. Dashboard — spending chart + streak badge
+1. Dashboard — month filter `< April 2026 >`, vehicle picker, spending chart + streak badge
 2. Fuel Log list — cards with efficiency badges
 3. Add Fuel Sheet — GPS button + OCR banner
 4. Maintenance tasks list

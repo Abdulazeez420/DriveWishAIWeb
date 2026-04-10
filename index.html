@@ -108,6 +108,7 @@
         <span class="hero-trust-item"><img src="assets/data-security.png" alt="" aria-hidden="true" width="18" height="18" style="object-fit:contain;" /> Encrypted on-device</span>
         <span class="hero-trust-item"><img src="assets/offline.png" alt="" aria-hidden="true" width="18" height="18" style="object-fit:contain;" /> 100% Offline</span>
         <span class="hero-trust-item">🌙 Light &amp; Dark Mode</span>
+        <span class="hero-trust-item">📱 Edge-to-Edge Display</span>
       </div>
     </div>
 
@@ -173,9 +174,9 @@
         <p>Schedule oil changes, tyre rotations and more by date or mileage. Get notified before they're overdue. Log parts vs. labour costs separately.</p>
       </article>
       <article class="card feature-card fade-up" style="transition-delay:0.2s">
-        <img src="assets/telemetry.png" class="feature-icon" alt="" aria-hidden="true" />
-        <h4>On-Device AI Insights</h4>
-        <p>Get practical, rule-based alerts from your own data: fuel efficiency drops, overdue maintenance risks, and high-spend patterns.</p>
+        <img src="assets/divestiture.png" class="feature-icon" alt="" aria-hidden="true" />
+        <h4>Spending Analytics</h4>
+        <p>Navigate month-by-month with interactive &lt; April 2026 &gt; controls. Filter by vehicle or view all combined — charts, totals, and breakdowns update instantly.</p>
       </article>
       <article class="card feature-card fade-up" style="transition-delay:0.3s">
         <img src="assets/tax.png" class="feature-icon" alt="" aria-hidden="true" />
@@ -518,6 +519,7 @@
           <li class="cloud-feature">ZIP compression</li>
           <li class="cloud-feature">Auto-deduplication</li>
           <li class="cloud-feature">Timestamp tracking</li>
+          <li class="cloud-feature">Configurable frequency — daily, weekly, or monthly</li>
         </ul>
       </div>
       <div class="card cloud-card fade-up" style="transition-delay:0.1s">
@@ -525,15 +527,19 @@
         <h4>Dropbox</h4>
         <p class="cloud-card-tagline">"Backs up as encrypted ZIP into your /Apps/DriveWise AI folder"</p>
         <ul class="cloud-features" role="list">
+          <li class="cloud-feature">ZIP compression with timestamp history</li>
           <li class="cloud-feature">Merge restore — only adds missing records</li>
-          <li class="cloud-feature">ZIP compression</li>
           <li class="cloud-feature">Works alongside Google Drive</li>
+          <li class="cloud-feature">Silently skips auto-backup if not yet connected — never intrudes mid-session</li>
         </ul>
       </div>
     </div>
 
     <div class="cloud-note fade-up">
       <p class="cloud-note-restore">
+        Enable auto-backup in <strong>Settings → Backup &amp; Sync</strong>. DriveWise AI checks your chosen frequency on every app launch and backs up automatically when due.
+      </p>
+      <p class="cloud-note-restore" style="margin-top:8px;">
         Google Drive restore replaces local data, while Dropbox restore merges missing records into local data. All backup files remain encrypted end-to-end.
       </p>
     </div>
@@ -559,7 +565,13 @@
             <div class="carousel-screen">
               <div style="font-size:10px;color:var(--text-secondary);margin-bottom:8px;">9:41</div>
               <div class="streak-badge" style="font-size:10px;">🔥 12 Day Streak</div>
-              <div style="font-size:11px;font-weight:700;margin:8px 0 10px;">Dashboard</div>
+              <div style="font-size:11px;font-weight:700;margin:8px 0 6px;">Dashboard</div>
+              <div style="display:flex;align-items:center;justify-content:center;gap:8px;background:rgba(79,142,247,0.08);border:1px solid rgba(79,142,247,0.18);border-radius:8px;padding:5px 10px;margin-bottom:6px;font-size:10px;">
+                <span style="color:var(--primary);font-size:13px;">‹</span>
+                <span style="font-weight:600;">April 2026</span>
+                <span style="color:var(--text-secondary);font-size:13px;">›</span>
+              </div>
+              <div style="font-size:9px;color:var(--text-secondary);text-align:center;margin-bottom:8px;">All Vehicles</div>
               <div class="phone-chart-bars" style="height:50px;margin-bottom:10px;">
                 <div class="phone-bar" style="height:50%"></div>
                 <div class="phone-bar" style="height:70%"></div>
@@ -571,7 +583,7 @@
               <div class="mock-item"><div class="mock-item-title">Total Spent</div><div style="font-size:16px;font-weight:800;color:var(--primary);">₦182,400</div></div>
             </div>
           </div>
-          <p class="carousel-label">Dashboard — spending chart + streak badge</p>
+          <p class="carousel-label">Dashboard — month filter, vehicle picker + spending chart</p>
         </div>
 
         <div class="carousel-slide" role="listitem">
