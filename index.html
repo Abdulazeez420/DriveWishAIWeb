@@ -191,7 +191,7 @@
       <article class="card feature-card fade-up" style="transition-delay:0.5s">
         <img src="assets/backup.png" class="feature-icon" alt="" aria-hidden="true" />
         <h4>Cloud Backup &amp; Restore</h4>
-        <p>Encrypted sync to Google Drive and Dropbox with scheduled auto-backups and flexible restore options built for real-world use.</p>
+        <p>Serverless sync to Google Drive and Dropbox through dedicated backup and restore screens. Your encrypted data stays in your own cloud storage. No DriveWise account required.</p>
       </article>
     </div>
   </div>
@@ -500,6 +500,71 @@
 
 
 <!-- =========================================================
+     8B. EXPORT SETTINGS SPOTLIGHT
+     ========================================================= -->
+<section id="export-settings" aria-labelledby="export-settings-heading">
+  <div class="calc-inner">
+    <div class="calc-content fade-up">
+      <span class="label-pill">CUSTOMIZABLE REPORTS</span>
+      <h3 id="export-settings-heading">Export Settings &amp; PDF Theming</h3>
+      <p>
+        Access Export Settings from the App Drawer to personalise every report.
+        Pick from 15 accent colours, set paper size and orientation, and filter
+        Maintenance &amp; Expense exports by individual vehicle or all vehicles combined.
+      </p>
+      <ul class="dive-bullets" role="list">
+        <li class="dive-bullet"><span class="dive-bullet-check" aria-hidden="true">✓</span><strong>15 PDF accent colours</strong> — Default slate, Cobalt, Blue, Purple, Orange, Sky, Slate, Cyan, Indigo, Amber, Rose, Red, Pink, Emerald, Lime</li>
+        <li class="dive-bullet"><span class="dive-bullet-check" aria-hidden="true">✓</span><strong>Paper size &amp; orientation</strong> — A4, Letter, or Legal · Portrait or Landscape toggle</li>
+        <li class="dive-bullet"><span class="dive-bullet-check" aria-hidden="true">✓</span><strong>Font scale</strong> — Small (8 pt), Normal (9 pt), or Large (11 pt)</li>
+        <li class="dive-bullet"><span class="dive-bullet-check" aria-hidden="true">✓</span><strong>Vehicle-filtered exports</strong> — Maintenance &amp; Expense PDFs scoped to one vehicle or all vehicles</li>
+        <li class="dive-bullet"><span class="dive-bullet-check" aria-hidden="true">✓</span><strong>Tax details</strong> — Tax year stepper, mileage rate, and business name on every Tax PDF</li>
+        <li class="dive-bullet"><span class="dive-bullet-check" aria-hidden="true">✓</span><strong>Date range filter</strong> — Scope Export History to a custom from / to date window</li>
+      </ul>
+    </div>
+    <div class="calc-mock fade-up" aria-hidden="true">
+      <h4>Accent Colour</h4>
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin-bottom:16px;">
+        <div style="aspect-ratio:1;border-radius:9px;background:#334155;border:2px solid rgba(255,255,255,0.35);display:flex;align-items:center;justify-content:center;"><span style="font-size:7px;color:#fff;font-weight:700;">Default</span></div>
+        <div style="aspect-ratio:1;border-radius:9px;background:#2563EB;"></div>
+        <div style="aspect-ratio:1;border-radius:9px;background:#7C3AED;"></div>
+        <div style="aspect-ratio:1;border-radius:9px;background:#EA580C;"></div>
+        <div style="aspect-ratio:1;border-radius:9px;background:#0EA5E9;"></div>
+        <div style="aspect-ratio:1;border-radius:9px;background:#475569;"></div>
+        <div style="aspect-ratio:1;border-radius:9px;background:#06B6D4;"></div>
+        <div style="aspect-ratio:1;border-radius:9px;background:#4F46E5;"></div>
+        <div style="aspect-ratio:1;border-radius:9px;background:#D97706;"></div>
+        <div style="aspect-ratio:1;border-radius:9px;background:#E11D48;"></div>
+        <div style="aspect-ratio:1;border-radius:9px;background:#DC2626;"></div>
+        <div style="aspect-ratio:1;border-radius:9px;background:#EC4899;"></div>
+        <div style="aspect-ratio:1;border-radius:9px;background:#059669;"></div>
+        <div style="aspect-ratio:1;border-radius:9px;background:#65A30D;"></div>
+      </div>
+      <div class="calc-field">
+        <label>Paper Size</label>
+        <div style="display:flex;gap:6px;">
+          <div style="flex:1;height:32px;background:var(--primary);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;">A4</div>
+          <div style="flex:1;height:32px;background:rgba(255,255,255,0.06);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--text-secondary);">Letter</div>
+          <div style="flex:1;height:32px;background:rgba(255,255,255,0.06);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--text-secondary);">Legal</div>
+        </div>
+      </div>
+      <div class="calc-field">
+        <label>Vehicle Filter</label>
+        <div style="height:32px;background:rgba(255,255,255,0.06);border-radius:8px;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;padding:0 12px;font-size:12px;color:var(--text-secondary);">All Vehicles ▾</div>
+      </div>
+      <div class="calc-field">
+        <label>Tax Year</label>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:32px;height:32px;background:rgba(255,255,255,0.06);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;color:var(--text-secondary);">−</div>
+          <div style="flex:1;text-align:center;font-size:14px;font-weight:700;">2026</div>
+          <div style="width:32px;height:32px;background:rgba(255,255,255,0.06);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;color:var(--text-secondary);">+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================
      9. CLOUD SYNC SPOTLIGHT
      ========================================================= -->
 <section id="cloud-sync" aria-labelledby="cloud-heading">
@@ -516,10 +581,10 @@
         <h4>Google Drive</h4>
         <p class="cloud-card-tagline">"Backs up to your private appDataFolder — invisible to other apps"</p>
         <ul class="cloud-features" role="list">
-          <li class="cloud-feature">ZIP compression</li>
-          <li class="cloud-feature">Auto-deduplication</li>
+          <li class="cloud-feature">ZIP compression &amp; auto-deduplication</li>
           <li class="cloud-feature">Timestamp tracking</li>
-          <li class="cloud-feature">Configurable frequency — daily, weekly, or monthly</li>
+          <li class="cloud-feature">Dedicated backup and restore screen</li>
+          <li class="cloud-feature">Configurable auto-backup — Daily, Weekly, or Monthly</li>
         </ul>
       </div>
       <div class="card cloud-card fade-up" style="transition-delay:0.1s">
@@ -529,18 +594,21 @@
         <ul class="cloud-features" role="list">
           <li class="cloud-feature">ZIP compression with timestamp history</li>
           <li class="cloud-feature">Merge restore — only adds missing records</li>
-          <li class="cloud-feature">Works alongside Google Drive</li>
-          <li class="cloud-feature">Silently skips auto-backup if not yet connected — never intrudes mid-session</li>
+          <li class="cloud-feature">Configurable auto-backup — Daily, Weekly, or Monthly</li>
+          <li class="cloud-feature">Silently skips if not yet connected — never opens OAuth prompts in the background</li>
         </ul>
       </div>
     </div>
 
     <div class="cloud-note fade-up">
       <p class="cloud-note-restore">
-        Enable auto-backup in <strong>Settings → Backup &amp; Sync</strong>. DriveWise AI checks your chosen frequency on every app launch and backs up automatically when due.
+        Open the App Drawer and choose <strong>Google Drive</strong> or <strong>Dropbox</strong> to manage backup and restore from dedicated Sync pages.
       </p>
       <p class="cloud-note-restore" style="margin-top:8px;">
-        Google Drive restore replaces local data, while Dropbox restore merges missing records into local data. All backup files remain encrypted end-to-end.
+        Auto-backup is <strong>enabled by default</strong> after your first successful backup — no extra configuration needed. Adjust the frequency (Daily, Weekly, or Monthly) from the Backup &amp; Sync screen at any time.
+      </p>
+      <p class="cloud-note-restore" style="margin-top:8px;">
+        Google Drive restore replaces local data; Dropbox restore merges missing records into local data. All backup files remain encrypted end-to-end.
       </p>
     </div>
   </div>
@@ -630,16 +698,28 @@
         <div class="carousel-slide" role="listitem">
           <div class="carousel-phone">
             <div class="carousel-screen">
-              <div style="font-size:11px;font-weight:700;margin-bottom:10px;">Tax Report</div>
-              <div style="font-size:10px;color:var(--text-secondary);margin-bottom:8px;">Vehicle: Toyota Camry 2022</div>
-              <div style="background:rgba(79,142,247,0.1);border:1px solid rgba(79,142,247,0.2);border-radius:10px;padding:12px;margin-bottom:10px;">
-                <div style="font-size:10px;color:var(--text-secondary);">2026 DEDUCTIBLE KM</div>
-                <div style="font-size:20px;font-weight:800;color:var(--primary);">1,240 km</div>
+              <div style="font-size:11px;font-weight:700;margin-bottom:10px;">Export &amp; Backup</div>
+              <div class="mock-list">
+                <div class="mock-item">
+                  <div class="mock-item-title">Tax Deduction Report</div>
+                  <div class="mock-item-sub">Toyota Camry · 1,240 km <span class="mock-item-badge badge-orange">🔒 Premium</span></div>
+                </div>
+                <div class="mock-item">
+                  <div class="mock-item-title">Export History</div>
+                  <div class="mock-item-sub">JSON · PDF · Excel <span class="mock-item-badge badge-orange">🔒 Premium</span></div>
+                </div>
+                <div class="mock-item">
+                  <div class="mock-item-title">Google Drive</div>
+                  <div class="mock-item-sub">Last: Today 09:14 <span class="mock-item-badge badge-green">Synced</span></div>
+                </div>
+                <div class="mock-item">
+                  <div class="mock-item-title">Dropbox</div>
+                  <div class="mock-item-sub">Auto · Weekly <span class="mock-item-badge badge-blue">Enabled</span></div>
+                </div>
               </div>
-              <div style="background:var(--primary);border-radius:8px;padding:10px;text-align:center;font-size:11px;font-weight:700;">Generate PDF Report</div>
             </div>
           </div>
-          <p class="carousel-label">Tax Report card — vehicle picker + Generate PDF button</p>
+          <p class="carousel-label">Export &amp; Backup — Tax Report, Export History, Google Drive, Dropbox</p>
         </div>
 
         <div class="carousel-slide" role="listitem">
